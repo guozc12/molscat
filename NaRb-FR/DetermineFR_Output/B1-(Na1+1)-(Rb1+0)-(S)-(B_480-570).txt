@@ -1,0 +1,2109 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.01                              |
+ |                                                                            |
+ |                       Run on 05 May 2021   at 23:58:48                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.01             
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL (IPRINT) = 11     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  REDUCED MASS FOR INTERACTION =  18.180536600 ATOMIC MASS UNITS (DALTONS)
+
+  ======================================================================================================================
+  ATOM - ATOM IN UNCOUPLED BASIS  
+
+
+  ATOM A WITH S = 1/2,     MU_S   =    2.002296 MU_B
+              I = 3/2,     MU_NUC =   -0.000805 MU_B
+              HYPERFINE SPLITTING =    1.771626, COUPLING CONST =    0.885813 GHZ
+
+
+  ATOM B WITH S = 1/2,     MU_S   =    2.002331 MU_B
+              I = 3/2,     MU_NUC =   -0.000995 MU_B
+              HYPERFINE SPLITTING =    6.834683, COUPLING CONST =    3.417341 GHZ
+
+  L UP TO    0
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM IN UNCOUPLED BASIS  
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -3        -1        -3
+        2              -1        -3        -1        -1
+        3              -1        -3        -1         1
+        4              -1        -3        -1         3
+        5              -1        -3         1        -3
+        6              -1        -3         1        -1
+        7              -1        -3         1         1
+        8              -1        -3         1         3
+        9              -1        -1        -1        -3
+       10              -1        -1        -1        -1
+       11              -1        -1        -1         1
+       12              -1        -1        -1         3
+       13              -1        -1         1        -3
+       14              -1        -1         1        -1
+       15              -1        -1         1         1
+       16              -1        -1         1         3
+       17              -1         1        -1        -3
+       18              -1         1        -1        -1
+       19              -1         1        -1         1
+       20              -1         1        -1         3
+       21              -1         1         1        -3
+       22              -1         1         1        -1
+       23              -1         1         1         1
+       24              -1         1         1         3
+       25              -1         3        -1        -3
+       26              -1         3        -1        -1
+       27              -1         3        -1         1
+       28              -1         3        -1         3
+       29              -1         3         1        -3
+       30              -1         3         1        -1
+       31              -1         3         1         1
+       32              -1         3         1         3
+       33               1        -3        -1        -3
+       34               1        -3        -1        -1
+       35               1        -3        -1         1
+       36               1        -3        -1         3
+       37               1        -3         1        -3
+       38               1        -3         1        -1
+       39               1        -3         1         1
+       40               1        -3         1         3
+       41               1        -1        -1        -3
+       42               1        -1        -1        -1
+       43               1        -1        -1         1
+       44               1        -1        -1         3
+       45               1        -1         1        -3
+       46               1        -1         1        -1
+       47               1        -1         1         1
+       48               1        -1         1         3
+       49               1         1        -1        -3
+       50               1         1        -1        -1
+       51               1         1        -1         1
+       52               1         1        -1         3
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         1         1         3
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3         1        -3
+       62               1         3         1        -1
+       63               1         3         1         1
+       64               1         3         1         3
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  NaRb with short range refitted by J. M. Hutson 2021 using mid and long range from Wang et al., PRA 87, 050702 (2013)   
+
+  input gamma and beta unchanged
+  beta  =   2.208500000000     A-1
+  gamma =   5.008100000000    
+
+  For potential  1 at RLR =  11.30000000000     A
+                  with C6 =  12946359.63726     and C8 =  358980000.0000    
+  V_LR  =  -8.040325977745    cm-1
+  V_mid =  -8.040325973383    cm-1, dV/dR =   4.698002560472    cm-1/A
+  A(0) shifted from  -5030.508697830     cm-1
+                 to  -5030.508697834     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  8.4430898789592E-02 cm-1/A
+  Discontinuity / value is  1.7654380245707E-02
+
+  For potential  1 at RSR =  2.725600000000     A
+  V     =  -809.2483045167    cm-1, dV/dR =  -11445.28445598    cm-1/A and n =   4.061438610497    
+  B(SR) shifted from   0.000000000000     cm-1 A^n
+                  to   450828.6299011     cm-1 A^n
+  A(SR) shifted from   0.000000000000     cm-1
+                  to  -8490.090071421     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  NaRb with short range refitted by J. M. Hutson 2021 using mid and long range from Wang et al., PRA 87, 050702 (2013)   
+
+  input gamma and beta unchanged
+  beta  =   2.208500000000     A-1
+  gamma =   5.008100000000    
+
+  For potential  2 at RLR =  11.30000000000     A
+                  with C6 =  12946359.63726     and C8 =  358980000.0000    
+  V_LR  =  -7.866577497083    cm-1
+  V_mid =  -7.866577493536    cm-1, dV/dR =   4.644806568588    cm-1/A
+  A(0) shifted from  -203.3507085200     cm-1
+                 to  -203.3507085235     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.2307206571295     cm-1/A
+  Discontinuity / value is -5.2269181379228E-02
+
+  For potential  2 at RSR =  4.650000000000     A
+  V     =  -4.171236238351    cm-1, dV/dR =  -565.4419290973    cm-1/A and n =   11.49200000000    
+  B(SR) shifted from   0.000000000000     cm-1 A^n
+                  to   10710621685.47     cm-1 A^n
+  A(SR) shifted from   0.000000000000     cm-1
+                  to  -232.9656123524     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -1.00232065E+00 * R ** -3
+                 1.00000000E+00 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   4.600     RMID =   30.00     RMAX =  1.0000E+04
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      4.60 TO RMID =     30.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =     30.00 TO RMAX =  10000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  5.000E-02
+  STEP SIZE SCALES AS R**2.67
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  ======================================================================================================================
+
+  INPUT ENERGIES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT EUNITS =   2
+
+  INPUT ENERGY LIST IS
+                    6.950348E-10
+
+  CALCULATIONS WILL BE PERFORMED FOR    1 ENERGY  
+  ENERGY    1           =  6.9503480040E-10 CM-1 =  1.0000000000E-09 K       
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CHARACTERISE RESONANCE IN SCATTERING LENGTH FOR CHANNEL   2 TO ACCURACY  1.00E-06 GAUSS
+  BETWEEN FLDMIN AND FLDMAX FOR MAGNETIC Z FIELD
+
+  USING FORMULA INCORPORATING WEAK BACKGROUND INELASTICITY.
+
+  THE CONVERGENCE PROCEDURE IS CONTROLLED BY PARAMETERS
+  TLO = -0.1000, THI =  1.0000 AND XI =  0.2500
+
+               POTL SCALING FACTOR (      )     MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             1.000000000                   470.0000000    
+  FLDMAX:             1.000000000                   570.0000000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   2
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   2   2   2   0
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.02 CPU SECS.       322 WORDS OF STORAGE USED.
+
+  ================================== 23Na-87Rb scattering length of Na|1,1> + Rb|1,0> ==================================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   2   AND SYMMETRY BLOCK  =    2  ****************************
+  SYMMETRY BLOCK =   2 SELECTS PARITY  1
+  MTOT =  2/2
+  * * * NOTE.  FOR JTOT =   2,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   3
+
+  BASIS FUNCTION LIST:
+  BASIS FN        SET   ------ PAIR STATE QUANTUM NUMBERS ------           L 
+                            2*MSA     2*MIA     2*MSB     2*MIB 
+        1          16         -1        -1         1         3             0
+        2          20         -1         1        -1         3             0
+        3          23         -1         1         1         1             0
+        4          27         -1         3        -1         1             0
+        5          30         -1         3         1        -1             0
+        6          40          1        -3         1         3             0
+        7          44          1        -1        -1         3             0
+        8          47          1        -1         1         1             0
+        9          51          1         1        -1         1             0
+       10          54          1         1         1        -1             0
+       11          58          1         3        -1        -1             0
+       12          61          1         3         1        -3             0
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     1:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   470.0000000     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   470.0000000    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0601445383
+    2     2     -0.0594263532
+    3     3     -0.0379023675
+    4     4     -0.0323779589
+    5     5     -0.0269141048
+    6     6      0.0106928146
+    7     7      0.0162146980
+    8     8      0.0221898983
+    9     9      0.0363524932
+   10    10      0.0377412089
+   11    11      0.0382464450
+   12    12      0.0384568689
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.5644994 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3346218 GHZ
+  REFERENCE ENERGY IS                          -0.1967735013     CM-1    = -0.2831131639     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.199151567484            -0.286534670450    
+          2       0        -0.196773501337            -0.283113163865    
+          3       0        -0.125502931793            -0.180570716345    
+          4       0        -0.107210420754            -0.154251874427    
+          5       0        -8.911841871368E-02        -0.128221520221    
+          6       0         3.540622050504E-02         5.094165138877E-02
+          7       0         5.369037005902E-02         7.724846299511E-02
+          8       0         7.347554995141E-02         0.105714922345    
+          9       0         0.120370963091             0.173186958440    
+         10       0         0.124969301089             0.179802940826    
+         11       0         0.126642246997             0.182209936717    
+         12       0         0.127339005750             0.183212417100    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1967735006     CM-1    = -0.2831131629     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.06427323E-02         1            0          -0.199151567484
+           2    2.73784146E-05         2            0          -0.196773501337
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9997506902886E-001   3.1808847852494E-001  -4.1487629765637E-001   9.0986412539005E-001
+    2    1 2.4930971136797E-005  -9.1125215765041E-002   4.1967869493384E-003  -2.7051710553420E-003
+    1    2 2.4930971136797E-005  -9.1125215765041E-002   4.1967869493384E-003  -2.7051710553420E-003
+    2    2 9.9997506902886E-001  -3.3891005501716E-004   9.9998526721983E-001  -2.1294065242395E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488033056434E-005   7.3489461075254E+001  -4.3020522667506E-001
+
+  TLO =  -0.1000  THI =   1.0000  XI =   0.2500
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     2:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   570.0000000     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   570.0000000    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0619400503
+    2     2     -0.0609031209
+    3     3     -0.0379052897
+    4     4     -0.0314926507
+    5     5     -0.0250591230
+    6     6      0.0098052375
+    7     7      0.0162148140
+    8     8      0.0231087631
+    9     9      0.0373200488
+   10    10      0.0392157077
+   11    11      0.0401488240
+   12    12      0.0402495746
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6818510 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3638656 GHZ
+  REFERENCE ENERGY IS                          -0.2016633983     CM-1    = -0.2901486345     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.205096895636            -0.295088671125    
+          2       0        -0.201663398272            -0.290148634508    
+          3       0        -0.125512607808            -0.180584637972    
+          4       0        -0.104278973907            -0.150034176486    
+          5       0        -8.297617306878E-02        -0.119384199210    
+          6       0         3.246726077407E-02         4.671314408341E-02
+          7       0         5.369075415075E-02         7.724901561742E-02
+          8       0         7.651810974953E-02         0.110092487032    
+          9       0         0.123574748809             0.177796491251    
+         10       0         0.129851685139             0.186827602106    
+         11       0         0.132941434972             0.191273062724    
+         12       0         0.133275041978             0.191753048771    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.2016633976     CM-1    = -0.2901486335     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    6.08518104E-02         1            0          -0.205096895636
+           2    2.73784105E-05         2            0          -0.201663398272
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9999768285935E-001   2.7409809022216E-001  -1.5083471069456E-001   9.8855782476749E-001
+    2    1 2.3171406539357E-006   3.8687984394438E-001  -1.1536409910991E-003   9.9310277292506E-004
+    1    2 2.3171406539357E-006   3.8687984394438E-001  -1.1536409910991E-003   9.9310277292506E-004
+    2    2 9.9999768285935E-001  -3.3840233339265E-004   9.9999658097449E-001  -2.1262405035894E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488030901205E-005   7.3379377247136E+001  -3.9983797197676E-002
+  AVERAGE OF FIRST TWO SCATTERING LENGTHS GIVES FIRST APPROXIMATION OF A_BG =     73.43442 BOHR      
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     3:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   520.0000000     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   520.0000000    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0610255752
+    2     2     -0.0601526547
+    3     3     -0.0379128554
+    4     4     -0.0319338388
+    5     5     -0.0259794592
+    6     6      0.0102475601
+    7     7      0.0162237828
+    8     8      0.0226758456
+    9     9      0.0368291164
+   10    10      0.0384663760
+   11    11      0.0391711195
+   12    12      0.0393365026
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6226482 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3485713 GHZ
+  REFERENCE ENERGY IS                          -0.1991784427     CM-1    = -0.2865733379     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202068871039            -0.290732019351    
+          2       0        -0.199178442684            -0.286573337867    
+          3       0        -0.125537659590            -0.180620681896    
+          4       0        -0.105739843176            -0.152136041411    
+          5       0        -8.602360538255E-02        -0.123768774359    
+          6       0         3.393188648499E-02         4.882041369074E-02
+          7       0         5.372045189395E-02         7.729174404365E-02
+          8       0         7.508462664099E-02         0.108030024680    
+          9       0         0.121949165441             0.175457639490    
+         10       0         0.127370485994             0.183257710147    
+         11       0         0.129704044194             0.186615179728    
+         12       0         0.130251663344             0.187403081499    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1991784420     CM-1    = -0.2865733369     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.58323949E-02         1            0          -0.202068871039
+           2    2.73784159E-05         2            0          -0.199178442684
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9953891270401E-001   2.8134326111434E-002   9.8418928806053E-001   1.7581341806279E-001
+    2    1 4.6108729599366E-004  -2.3611627636730E-001   1.8707960887682E-003  -2.1391293041514E-002
+    1    2 4.6108729599366E-004  -2.3611627636730E-001   1.8707960887682E-003  -2.1391293041514E-002
+    2    2 9.9953891270401E-001  -3.6687884602707E-004   9.9976677348523E-001  -2.3046342307482E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488033774843E-005   7.9554230781735E+001  -7.9581923818080E+000
+
+  USING POINTS   1   3 AND   2
+
+  USING PREVIOUS VALUE OF A_BG =   73.4344192 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_01 =  7.34895E+01 -4.30205E-01 i  GIVES   A_REGULARISED = +7.68519E+01 BOHR
+  A_03 =  7.95542E+01 -7.95819E+00 i  GIVES   A_REGULARISED = +8.99031E+01 BOHR
+  A_02 =  7.33794E+01 -3.99838E-02 i  GIVES   A_REGULARISED = +7.33503E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   525.914088     GAUSS
+                                                DELTA =   1.1462         GAUSS
+                                                 A_BG =   75.308         BOHR      
+
+  SCATTERING LENGTH FOR POINT  3 GIVES          A_RES =   10.224     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -16.885     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:  -48.8       38.5      -5.16    
+
+  MOVING POINT FURTHEST FROM THE RESONANCE BECAUSE IT IS STILL FAR FROM THE RESONANCE
+  PLACING NEW POINT AT PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     4:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   525.9140880     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   525.9140880    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611320605
+    2     2     -0.0602401902
+    3     3     -0.0379128491
+    4     4     -0.0318814789
+    5     5     -0.0258698482
+    6     6      0.0101950660
+    7     7      0.0162236105
+    8     8      0.0227297247
+    9     9      0.0368864327
+   10    10      0.0385537773
+   11    11      0.0392840913
+   12    12      0.0394428220
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6295984 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3503105 GHZ
+  REFERENCE ENERGY IS                          -0.1994682916     CM-1    = -0.2869903658     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202421466975            -0.291239326230    
+          2       0        -0.199468291602            -0.286990365788    
+          3       0        -0.125537638686            -0.180620651820    
+          4       0        -0.105566468297            -0.151886593644    
+          5       0        -8.566065951534E-02        -0.123246576238    
+          6       0         3.375806728762E-02         4.857032664866E-02
+          7       0         5.371988145807E-02         7.729092331369E-02
+          8       0         7.526303186655E-02         0.108286709994    
+          9       0         0.122138952094             0.175730700137    
+         10       0         0.127659890593             0.183674098793    
+         11       0         0.130078118153             0.187153388692    
+         12       0         0.130603709747             0.187909597723    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1994682909     CM-1    = -0.2869903648     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.64351613E-02         1            0          -0.202421466975
+           2    2.73784123E-05         2            0          -0.199468291602
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9927981185998E-001  -2.5911783928980E-001  -5.7237119628222E-002  -9.9799986172176E-001
+    2    1 7.2018814001485E-004  -3.7972202261681E-001  -1.9530720463055E-002  -1.8404866155690E-002
+    1    2 7.2018814001485E-004  -3.7972202261681E-001  -1.9530720463055E-002  -1.8404866155690E-002
+    2    2 9.9927981185999E-001  -3.2620594382112E-004   9.9963774137452E-001  -2.0488727726079E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488031859085E-005   7.0734695516161E+001  -1.2431784315588E+001
+
+  USING POINTS   3   4 AND   2
+
+  USING PREVIOUS VALUE OF A_BG =   75.3082167 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_03 =  7.95542E+01 -7.95819E+00 i  GIVES   A_REGULARISED = +9.44701E+01 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +3.69425E+01 BOHR
+  A_02 =  7.33794E+01 -3.99838E-02 i  GIVES   A_REGULARISED = +7.33785E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   523.915590     GAUSS
+                                                DELTA =   1.0145         GAUSS
+                                                 A_BG =   75.030         BOHR      
+
+  SCATTERING LENGTH FOR POINT  4 GIVES          A_RES =   13.916     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -10.940     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   45.4      -3.86       1.97    
+
+  MOVING POINT FURTHEST FROM THE RESONANCE BECAUSE IT IS STILL FAR FROM THE RESONANCE
+  PLACING NEW POINT AT PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     5:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   523.9155902     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   523.9155902    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0610960249
+    2     2     -0.0602105725
+    3     3     -0.0379128792
+    4     4     -0.0318991677
+    5     5     -0.0259068657
+    6     6      0.0102128001
+    7     7      0.0162236967
+    8     8      0.0227116004
+    9     9      0.0368670418
+   10    10      0.0385242049
+   11    11      0.0392458332
+   12    12      0.0394068424
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6272482 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3497207 GHZ
+  REFERENCE ENERGY IS                          -0.1993702208     CM-1    = -0.2868492637     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202302145158            -0.291067648759    
+          2       0        -0.199370220767            -0.286849263738    
+          3       0        -0.125537738263            -0.180620795089    
+          4       0        -0.105625039728            -0.151970864865    
+          5       0        -8.578323248464E-02        -0.123422931392    
+          6       0         3.381678886337E-02         4.865481389408E-02
+          7       0         5.372016673357E-02         7.729133376150E-02
+          8       0         7.520301828461E-02         0.108200363840    
+          9       0         0.122074744832             0.175638320213    
+         10       0         0.127561969902             0.183533212767    
+         11       0         0.129951437111             0.186971122937    
+         12       0         0.130484573629             0.187738187432    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993702201     CM-1    = -0.2868492627     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62317417E-02         1            0          -0.202302145158
+           2    2.73784078E-05         2            0          -0.199370220767
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9926320066468E-001  -1.4426122330351E-001   6.1634104950796E-001  -7.8701137943241E-001
+    2    1 7.3679933532428E-004  -3.2230395329378E-001  -1.1911694408512E-002  -2.4390794813669E-002
+    1    2 7.3679933532428E-004  -3.2230395329378E-001  -1.1911694408512E-002  -2.4390794813669E-002
+    2    2 9.9926320066468E-001  -3.4668328404118E-004   9.9962916088160E-001  -2.1774709707840E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488029464386E-005   7.5175030159551E+001  -1.2718633910091E+001
+
+  USING POINTS   3   5 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   75.0302628 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_03 =  7.95542E+01 -7.95819E+00 i  GIVES   A_REGULARISED = +9.35536E+01 BOHR
+  A_05 =  7.51750E+01 -1.27186E+01 i  GIVES   A_REGULARISED = +1.19258E+03 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +3.47559E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   523.983958     GAUSS
+                                                DELTA =   1.0280         GAUSS
+                                                 A_BG =   74.364         BOHR      
+
+  SCATTERING LENGTH FOR POINT  5 GIVES          A_RES =   12.770     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.973     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:  -3.88       1.88     -6.650E-02
+
+  MOVING POINT FURTHEST FROM THE RESONANCE BECAUSE IT IS STILL FAR FROM THE RESONANCE
+  PLACING NEW POINT AT TLO*|DELTA| FROM RESONANCE
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     6:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   523.8811537     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   523.8811537    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0610954044
+    2     2     -0.0602100624
+    3     3     -0.0379128794
+    4     4     -0.0318994725
+    5     5     -0.0259075038
+    6     6      0.0102131058
+    7     7      0.0162236979
+    8     8      0.0227112873
+    9     9      0.0368667079
+   10    10      0.0385236956
+   11    11      0.0392451747
+   12    12      0.0394062229
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6272077 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3497105 GHZ
+  REFERENCE ENERGY IS                          -0.1993685320     CM-1    = -0.2868468340     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202300090636            -0.291064692760    
+          2       0        -0.199368532002            -0.286846833982    
+          3       0        -0.125537739154            -0.180620796372    
+          4       0        -0.105626049125            -0.151972317163    
+          5       0        -8.578534522844E-02        -0.123425971159    
+          6       0         3.381780084809E-02         4.865626991429E-02
+          7       0         5.372017082482E-02         7.729133964789E-02
+          8       0         7.520198173866E-02         0.108198872481    
+          9       0         0.122073639129             0.175636729353    
+         10       0         0.127560283725             0.183530786734    
+         11       0         0.129949256685             0.186967985791    
+         12       0         0.130482522306             0.187735236036    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993685313     CM-1    = -0.2868468330     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62282341E-02         1            0          -0.202300090636
+           2    2.73784159E-05         2            0          -0.199368532002
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9926448560118E-001  -1.4235228147970E-001   6.2573649169664E-001  -7.7956290866123E-001
+    2    1 7.3551439882289E-004  -3.2134964884641E-001  -1.1754968774083E-002  -2.4440440011244E-002
+    1    2 7.3551439882289E-004  -3.2134964884641E-001  -1.1754968774083E-002  -2.4440440011244E-002
+    2    2 9.9926448560118E-001  -3.4701621312182E-004   9.9962979902779E-001  -2.1795634514768E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488033774843E-005   7.5247200397886E+001  -1.2696441419547E+001
+
+  USING POINTS   6   5 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3643210 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.57831E+02 BOHR
+  A_05 =  7.51750E+01 -1.27186E+01 i  GIVES   A_REGULARISED = +2.74709E+02 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.81547E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.289979     GAUSS
+                                                DELTA =   1.0090         GAUSS
+                                                 A_BG =   74.343         BOHR      
+
+  SCATTERING LENGTH FOR POINT  5 GIVES          A_RES =   12.773     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.746     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.405     -0.371    
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.44       12.2      3.744E+05
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     7:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2899787     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2899787    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027716
+    2     2     -0.0602161180
+    3     3     -0.0379128757
+    4     4     -0.0318958536
+    5     5     -0.0258999293
+    6     6      0.0102094775
+    7     7      0.0162236827
+    8     8      0.0227150021
+    9     9      0.0368706727
+   10    10      0.0385297419
+   11    11      0.0392529938
+   12    12      0.0394135786
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276883 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498310 GHZ
+  REFERENCE ENERGY IS                          -0.1993885832     CM-1    = -0.2868756832     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324484976            -0.291099790772    
+          2       0        -0.199388583196            -0.286875683176    
+          3       0        -0.125537726766            -0.180620778548    
+          4       0        -0.105614066019            -0.151955076147    
+          5       0        -8.576026450749E-02        -0.123389885597    
+          6       0         3.380578702746E-02         4.863898470696E-02
+          7       0         5.372012044883E-02         7.729126716809E-02
+          8       0         7.521428211499E-02         0.108216569979    
+          9       0         0.122086767324             0.175655617896    
+         10       0         0.127580304204             0.183559591737    
+         11       0         0.129975147712             0.187005237202    
+         12       0         0.130506878659             0.187770279392    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993885825     CM-1    = -0.2868756822     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62698701E-02         1            0          -0.202324484976
+           2    2.73784209E-05         2            0          -0.199388583196
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925235612434E-001  -1.6530465459899E-001   5.0720314059919E-001  -8.6139266904859E-001
+    2    1 7.4764387566320E-004  -3.3282380108312E-001  -1.3595658175020E-002  -2.3723447355964E-002
+    1    2 7.4764387566320E-004  -3.3282380108312E-001  -1.3595658175020E-002  -2.3723447355964E-002
+    2    2 9.9925235612434E-001  -3.4294756724557E-004   9.9962378744530E-001  -2.1539957854606E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488036409011E-005   7.4364938534231E+001  -1.2905895924800E+001
+
+  USING POINTS   6   7 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3428965 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.53505E+02 BOHR
+  A_07 =  7.43649E+01 -1.29059E+01 i  GIVES   A_REGULARISED = +7.63092E+03 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.79019E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.299906     GAUSS
+                                                DELTA =   1.0086         GAUSS
+                                                 A_BG =   74.373         BOHR      
+
+  SCATTERING LENGTH FOR POINT  7 GIVES          A_RES =   12.906     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.624     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.60     -0.415     -9.842E-03
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.40       12.6      9.927E+03
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     8:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2999055     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2999055    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611029505
+    2     2     -0.0602162650
+    3     3     -0.0379128756
+    4     4     -0.0318957657
+    5     5     -0.0258997454
+    6     6      0.0102093894
+    7     7      0.0162236823
+    8     8      0.0227150923
+    9     9      0.0368707690
+   10    10      0.0385298887
+   11    11      0.0392531838
+   12    12      0.0394137573
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6277000 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498339 GHZ
+  REFERENCE ENERGY IS                          -0.1993890701     CM-1    = -0.2868763838     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202325077392            -0.291100643127    
+          2       0        -0.199389070130            -0.286876383766    
+          3       0        -0.125537726416            -0.180620778044    
+          4       0        -0.105613775063            -0.151954657525    
+          5       0        -8.575965555583E-02        -0.123389009452    
+          6       0         3.380549532533E-02         4.863856501268E-02
+          7       0         5.372011917663E-02         7.729126533767E-02
+          8       0         7.521458063844E-02         0.108216999487    
+          9       0         0.122087086132             0.175656076590    
+         10       0         0.127580790392             0.183560291253    
+         11       0         0.129975776524             0.187006141921    
+         12       0         0.130507470152             0.187771130420    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993890694     CM-1    = -0.2868763828     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62708810E-02         1            0          -0.202325077392
+           2    2.73784155E-05         2            0          -0.199389070130
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925215030969E-001  -1.6586905497411E-001   5.0414520748108E-001  -8.6318582013582E-001
+    2    1 7.4784969031415E-004  -3.3310595031664E-001  -1.3639570611964E-002  -2.3702569561872E-002
+    1    2 7.4784969031415E-004  -3.3310595031664E-001  -1.3639570611964E-002  -2.3702569561872E-002
+    2    2 9.9925215030969E-001  -3.4284565916560E-004   9.9962368587874E-001  -2.1533554972391E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488033535374E-005   7.4342855457340E+001  -1.2909452596684E+001
+
+  USING POINTS   6   8 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3726205 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59564E+02 BOHR
+  A_08 =  7.43429E+01 -1.29095E+01 i  GIVES   A_REGULARISED = -5.52463E+03 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82519E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286498     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.373         BOHR      
+
+  SCATTERING LENGTH FOR POINT  8 GIVES          A_RES =   12.910     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.630     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.402      1.328E-02
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1      1.341E+04
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     9:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2864985     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2864985    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027089
+    2     2     -0.0602160664
+    3     3     -0.0379128757
+    4     4     -0.0318958844
+    5     5     -0.0258999938
+    6     6      0.0102095084
+    7     7      0.0162236829
+    8     8      0.0227149705
+    9     9      0.0368706389
+   10    10      0.0385296904
+   11    11      0.0392529273
+   12    12      0.0394135160
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276843 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498300 GHZ
+  REFERENCE ENERGY IS                          -0.1993884125     CM-1    = -0.2868754376     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324277279            -0.291099491943    
+          2       0        -0.199388412481            -0.286875437555    
+          3       0        -0.125537726888            -0.180620778723    
+          4       0        -0.105614168027            -0.151955222913    
+          5       0        -8.576047800259E-02        -0.123390192769    
+          6       0         3.380588929651E-02         4.863913184930E-02
+          7       0         5.372012089431E-02         7.729126780903E-02
+          8       0         7.521417745289E-02         0.108216419393    
+          9       0         0.122086655552             0.175655457081    
+         10       0         0.127580133750             0.183559346492    
+         11       0         0.129974927257             0.187004920015    
+         12       0         0.130506671286             0.187769981029    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884118     CM-1    = -0.2868754366     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62695157E-02         1            0          -0.202324277279
+           2    2.73784082E-05         2            0          -0.199388412481
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925242968724E-001  -1.6510685336492E-001   5.0827332491223E-001  -8.6076167251447E-001
+    2    1 7.4757031276260E-004  -3.3272491800616E-001  -1.3580248007780E-002  -2.3730722214247E-002
+    1    2 7.4757031276260E-004  -3.3272491800616E-001  -1.3580248007780E-002  -2.3730722214247E-002
+    2    2 9.9925242968724E-001  -3.4298264739427E-004   9.9962382376563E-001  -2.1542161969070E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488029703856E-005   7.4372579759415E+001  -1.2904631575865E+001
+
+  USING POINTS   6   9 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3729519 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59634E+02 BOHR
+  A_09 =  7.43726E+01 -1.29046E+01 i  GIVES   A_REGULARISED = -4.47435E+05 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82558E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286331     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.371         BOHR      
+
+  SCATTERING LENGTH FOR POINT  9 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.634     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.401      1.662E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1       168.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    10:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2863307     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2863307    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027059
+    2     2     -0.0602160639
+    3     3     -0.0379128757
+    4     4     -0.0318958859
+    5     5     -0.0258999969
+    6     6      0.0102095099
+    7     7      0.0162236829
+    8     8      0.0227149690
+    9     9      0.0368706373
+   10    10      0.0385296880
+   11    11      0.0392529241
+   12    12      0.0394135130
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276841 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498299 GHZ
+  REFERENCE ENERGY IS                          -0.1993884043     CM-1    = -0.2868754257     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324267269            -0.291099477541    
+          2       0        -0.199388404253            -0.286875425717    
+          3       0        -0.125537726894            -0.180620778732    
+          4       0        -0.105614172943            -0.151955229986    
+          5       0        -8.576048829238E-02        -0.123390207574    
+          6       0         3.380589422555E-02         4.863913894110E-02
+          7       0         5.372012091577E-02         7.729126783991E-02
+          8       0         7.521417240849E-02         0.108216412135    
+          9       0         0.122086650165             0.175655449331    
+         10       0         0.127580125535             0.183559334672    
+         11       0         0.129974916631             0.187004904728    
+         12       0         0.130506661291             0.187769966649    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884036     CM-1    = -0.2868754247     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62694987E-02         1            0          -0.202324267269
+           2    2.73784128E-05         2            0          -0.199388404253
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925243311226E-001  -1.6509731823904E-001   5.0832489393175E-001  -8.6073122130055E-001
+    2    1 7.4756688774015E-004  -3.3272015139049E-001  -1.3579506170100E-002  -2.3731074563036E-002
+    1    2 7.4756688774015E-004  -3.3272015139049E-001  -1.3579506170100E-002  -2.3731074563036E-002
+    2    2 9.9925243311226E-001  -3.4298454194526E-004   9.9962382545313E-001  -2.1542280999359E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488032098555E-005   7.4372978282454E+001  -1.2904570297873E+001
+
+  USING POINTS   6  10 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3708876 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59199E+02 BOHR
+  A_10 =  7.43730E+01 -1.29046E+01 i  GIVES   A_REGULARISED = +7.97256E+04 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82316E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.287273     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.372         BOHR      
+
+  SCATTERING LENGTH FOR POINT 10 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.633     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.402     -9.337E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1       942.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    11:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2872731     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2872731    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027228
+    2     2     -0.0602160779
+    3     3     -0.0379128757
+    4     4     -0.0318958776
+    5     5     -0.0258999794
+    6     6      0.0102095015
+    7     7      0.0162236828
+    8     8      0.0227149775
+    9     9      0.0368706464
+   10    10      0.0385297019
+   11    11      0.0392529421
+   12    12      0.0394135299
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276852 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498302 GHZ
+  REFERENCE ENERGY IS                          -0.1993884505     CM-1    = -0.2868754922     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324323509            -0.291099558457    
+          2       0        -0.199388450479            -0.286875492226    
+          3       0        -0.125537726861            -0.180620778684    
+          4       0        -0.105614145322            -0.151955190245    
+          5       0        -8.576043048238E-02        -0.123390124398    
+          6       0         3.380586653325E-02         4.863909909805E-02
+          7       0         5.372012079518E-02         7.729126766640E-02
+          8       0         7.521420074887E-02         0.108216452911    
+          9       0         0.122086680430             0.175655492876    
+         10       0         0.127580171690             0.183559401079    
+         11       0         0.129974976326             0.187004990615    
+         12       0         0.130506717443             0.187770047439    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884498     CM-1    = -0.2868754912     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62695946E-02         1            0          -0.202324323509
+           2    2.73784173E-05         2            0          -0.199388450479
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925241310592E-001  -1.6515087769607E-001   5.0803520336004E-001  -8.6090222746421E-001
+    2    1 7.4758689408218E-004  -3.3274692639338E-001  -1.3583680070469E-002  -2.3729107227735E-002
+    1    2 7.4758689408218E-004  -3.3274692639338E-001  -1.3583680070469E-002  -2.3729107227735E-002
+    2    2 9.9925241310592E-001  -3.4297509068562E-004   9.9962381557417E-001  -2.1541687166943E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488034493253E-005   7.4370916571174E+001  -1.2904913644553E+001
+
+  USING POINTS   6  11 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3720750 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59449E+02 BOHR
+  A_11 =  7.43709E+01 -1.29049E+01 i  GIVES   A_REGULARISED = -1.43686E+05 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82455E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286751     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.374         BOHR      
+
+  SCATTERING LENGTH FOR POINT 11 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.634     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.402      5.173E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1       522.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    12:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2867509     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2867509    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027134
+    2     2     -0.0602160702
+    3     3     -0.0379128757
+    4     4     -0.0318958822
+    5     5     -0.0258999891
+    6     6      0.0102095062
+    7     7      0.0162236828
+    8     8      0.0227149728
+    9     9      0.0368706414
+   10    10      0.0385296942
+   11    11      0.0392529321
+   12    12      0.0394135206
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276846 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498300 GHZ
+  REFERENCE ENERGY IS                          -0.1993884249     CM-1    = -0.2868754554     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324292347            -0.291099513622    
+          2       0        -0.199388424866            -0.286875455374    
+          3       0        -0.125537726879            -0.180620778711    
+          4       0        -0.105614160627            -0.151955212265    
+          5       0        -8.576046251401E-02        -0.123390170484    
+          6       0         3.380588187713E-02         4.863912117447E-02
+          7       0         5.372012086200E-02         7.729126776254E-02
+          8       0         7.521418504591E-02         0.108216430318    
+          9       0         0.122086663661             0.175655468748    
+         10       0         0.127580146116             0.183559364284    
+         11       0         0.129974943250             0.187004943026    
+         12       0         0.130506686330             0.187770002674    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884242     CM-1    = -0.2868754544     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62695414E-02         1            0          -0.202324292347
+           2    2.73784096E-05         2            0          -0.199388424866
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925242432094E-001  -1.6512120205526E-001   5.0819571910010E-001  -8.6080749033060E-001
+    2    1 7.4757567905821E-004  -3.3273209108423E-001  -1.3581366277791E-002  -2.3730195302329E-002
+    1    2 7.4757567905821E-004  -3.3273209108423E-001  -1.3581366277791E-002  -2.3730195302329E-002
+    2    2 9.9925242432094E-001  -3.4298011320099E-004   9.9962382111578E-001  -2.1542002743064E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488030422265E-005   7.4372026554993E+001  -1.2904723603918E+001
+
+  USING POINTS   6  12 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3736563 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59782E+02 BOHR
+  A_12 =  7.43720E+01 -1.29047E+01 i  GIVES   A_REGULARISED = -1.02109E+05 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82640E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286016     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.371         BOHR      
+
+  SCATTERING LENGTH FOR POINT 12 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.634     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.401      7.278E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.0       735.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    13:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2860163     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2860163    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027002
+    2     2     -0.0602160593
+    3     3     -0.0379128757
+    4     4     -0.0318958887
+    5     5     -0.0259000027
+    6     6      0.0102095127
+    7     7      0.0162236829
+    8     8      0.0227149661
+    9     9      0.0368706342
+   10    10      0.0385296833
+   11    11      0.0392529180
+   12    12      0.0394135073
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276837 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498298 GHZ
+  REFERENCE ENERGY IS                          -0.1993883888     CM-1    = -0.2868754035     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324248506            -0.291099450545    
+          2       0        -0.199388388831            -0.286875403528    
+          3       0        -0.125537726905            -0.180620778748    
+          4       0        -0.105614182159            -0.151955243245    
+          5       0        -8.576050757903E-02        -0.123390235323    
+          6       0         3.380590346430E-02         4.863915223359E-02
+          7       0         5.372012095600E-02         7.729126789779E-02
+          8       0         7.521416295352E-02         0.108216398532    
+          9       0         0.122086640068             0.175655434803    
+         10       0         0.127580110137             0.183559312517    
+         11       0         0.129974896716             0.187004876074    
+         12       0         0.130506642557             0.187769939695    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993883881     CM-1    = -0.2868754025     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62694666E-02         1            0          -0.202324248506
+           2    2.73784046E-05         2            0          -0.199388388831
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925243996991E-001  -1.6507945597062E-001   5.0842149401164E-001  -8.6067416854283E-001
+    2    1 7.4756003008950E-004  -3.3271122170747E-001  -1.3578112394376E-002  -2.3731727579238E-002
+    1    2 7.4756003008950E-004  -3.3271122170747E-001  -1.3578112394376E-002  -2.3731727579238E-002
+    2    2 9.9925243996991E-001  -3.4298744432809E-004   9.9962382884395E-001  -2.1542463366771E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488027788096E-005   7.4373629764993E+001  -1.2904455715750E+001
+
+  USING POINTS   6  13 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3713006 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59286E+02 BOHR
+  A_13 =  7.43736E+01 -1.29045E+01 i  GIVES   A_REGULARISED = +7.15699E+04 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82365E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.287066     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.370         BOHR      
+
+  SCATTERING LENGTH FOR POINT 13 GIVES          A_RES =   12.904     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.633     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.402     -1.040E-03
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1      1.050E+03
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    14:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2870662     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2870662    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027191
+    2     2     -0.0602160748
+    3     3     -0.0379128757
+    4     4     -0.0318958794
+    5     5     -0.0258999832
+    6     6      0.0102095034
+    7     7      0.0162236828
+    8     8      0.0227149756
+    9     9      0.0368706444
+   10    10      0.0385296988
+   11    11      0.0392529381
+   12    12      0.0394135262
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276849 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498301 GHZ
+  REFERENCE ENERGY IS                          -0.1993884403     CM-1    = -0.2868754776     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324311160            -0.291099540689    
+          2       0        -0.199388440329            -0.286875477622    
+          3       0        -0.125537726868            -0.180620778695    
+          4       0        -0.105614151387            -0.151955198972    
+          5       0        -8.576044317629E-02        -0.123390142662    
+          6       0         3.380587261392E-02         4.863910784678E-02
+          7       0         5.372012082166E-02         7.729126770450E-02
+          8       0         7.521419452590E-02         0.108216443957    
+          9       0         0.122086673784             0.175655483314    
+         10       0         0.127580161556             0.183559386497    
+         11       0         0.129974963218             0.187004971756    
+         12       0         0.130506705113             0.187770029699    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884396     CM-1    = -0.2868754766     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62695735E-02         1            0          -0.202324311160
+           2    2.73784087E-05         2            0          -0.199388440329
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925241769646E-001  -1.6513911631168E-001   5.0809882291707E-001  -8.6086468381897E-001
+    2    1 7.4758230354312E-004  -3.3274104660986E-001  -1.3582761716033E-002  -2.3729536188232E-002
+    1    2 7.4758230354312E-004  -3.3274104660986E-001  -1.3582761716033E-002  -2.3729536188232E-002
+    2    2 9.9925241769646E-001  -3.4297690803654E-004   9.9962381784569E-001  -2.1541801360994E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488029943326E-005   7.4371334003044E+001  -1.2904838425501E+001
+
+  USING POINTS   6  14 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3697485 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.58961E+02 BOHR
+  A_14 =  7.43713E+01 -1.29048E+01 i  GIVES   A_REGULARISED = +1.05109E+05 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82183E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.287781     GAUSS
+                                                DELTA =   1.0092         GAUSS
+                                                 A_BG =   74.371         BOHR      
+
+  SCATTERING LENGTH FOR POINT 14 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.633     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.403     -7.081E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1       715.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    15:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2877808     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2877808    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027320
+    2     2     -0.0602160854
+    3     3     -0.0379128757
+    4     4     -0.0318958731
+    5     5     -0.0258999700
+    6     6      0.0102094970
+    7     7      0.0162236828
+    8     8      0.0227149821
+    9     9      0.0368706514
+   10    10      0.0385297094
+   11    11      0.0392529518
+   12    12      0.0394135391
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276858 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498304 GHZ
+  REFERENCE ENERGY IS                          -0.1993884754     CM-1    = -0.2868755281     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324353806            -0.291099602049    
+          2       0        -0.199388475382            -0.286875528056    
+          3       0        -0.125537726843            -0.180620778659    
+          4       0        -0.105614130441            -0.151955168836    
+          5       0        -8.576039933870E-02        -0.123390079589    
+          6       0         3.380585161471E-02         4.863907763360E-02
+          7       0         5.372012073020E-02         7.729126757292E-02
+          8       0         7.521421601652E-02         0.108216474878    
+          9       0         0.122086696735             0.175655516335    
+         10       0         0.127580196555             0.183559436854    
+         11       0         0.129975008485             0.187005036885    
+         12       0         0.130506747694             0.187770090963    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884747     CM-1    = -0.2868755271     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62696463E-02         1            0          -0.202324353806
+           2    2.73784177E-05         2            0          -0.199388475382
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925240239354E-001  -1.6517973063213E-001   5.0787912075104E-001  -8.6099430956231E-001
+    2    1 7.4759760646259E-004  -3.3276135025740E-001  -1.3585927868937E-002  -2.3728046072162E-002
+    1    2 7.4759760646259E-004  -3.3276135025740E-001  -1.3585927868937E-002  -2.3728046072162E-002
+    2    2 9.9925240239354E-001  -3.4296988266426E-004   9.9962381028648E-001  -2.1541359944942E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488034732723E-005   7.4369786030624E+001  -1.2905098418054E+001
+
+  USING POINTS   6  15 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3713344 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59293E+02 BOHR
+  A_15 =  7.43698E+01 -1.29051E+01 i  GIVES   A_REGULARISED = -1.07487E+05 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82369E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.287083     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.373         BOHR      
+
+  SCATTERING LENGTH FOR POINT 15 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.633     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.402      6.915E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1       698.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    16:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2870829     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2870829    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027194
+    2     2     -0.0602160751
+    3     3     -0.0379128757
+    4     4     -0.0318958792
+    5     5     -0.0258999829
+    6     6      0.0102095032
+    7     7      0.0162236828
+    8     8      0.0227149758
+    9     9      0.0368706446
+   10    10      0.0385296991
+   11    11      0.0392529385
+   12    12      0.0394135265
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276849 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498301 GHZ
+  REFERENCE ENERGY IS                          -0.1993884411     CM-1    = -0.2868754788     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324312159            -0.291099542127    
+          2       0        -0.199388441150            -0.286875478803    
+          3       0        -0.125537726868            -0.180620778694    
+          4       0        -0.105614150896            -0.151955198266    
+          5       0        -8.576044214945E-02        -0.123390141184    
+          6       0         3.380587212204E-02         4.863910713907E-02
+          7       0         5.372012081952E-02         7.729126770142E-02
+          8       0         7.521419502929E-02         0.108216444682    
+          9       0         0.122086674322             0.175655484088    
+         10       0         0.127580162375             0.183559387677    
+         11       0         0.129974964279             0.187004973282    
+         12       0         0.130506706110             0.187770031134    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884405     CM-1    = -0.2868754778     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62695753E-02         1            0          -0.202324312159
+           2    2.73784141E-05         2            0          -0.199388441150
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925241720045E-001  -1.6514006596068E-001   5.0809368615676E-001  -8.6086771532453E-001
+    2    1 7.4758279954925E-004  -3.3274152142352E-001  -1.3582837015269E-002  -2.3729503538125E-002
+    1    2 7.4758279954925E-004  -3.3274152142352E-001  -1.3582837015269E-002  -2.3729503538125E-002
+    2    2 9.9925241720045E-001  -3.4297688635321E-004   9.9962381759789E-001  -2.1541799993756E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488032816964E-005   7.4371314549979E+001  -1.2904844431188E+001
+
+  USING POINTS   6  16 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3733837 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59725E+02 BOHR
+  A_16 =  7.43713E+01 -1.29048E+01 i  GIVES   A_REGULARISED = -8.04088E+04 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82608E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286150     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.373         BOHR      
+
+  SCATTERING LENGTH FOR POINT 16 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.634     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.401      9.241E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.0       933.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    17:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2861502     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2861502    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027026
+    2     2     -0.0602160613
+    3     3     -0.0379128757
+    4     4     -0.0318958875
+    5     5     -0.0259000002
+    6     6      0.0102095115
+    7     7      0.0162236829
+    8     8      0.0227149673
+    9     9      0.0368706355
+   10    10      0.0385296853
+   11    11      0.0392529206
+   12    12      0.0394135097
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276838 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498299 GHZ
+  REFERENCE ENERGY IS                          -0.1993883954     CM-1    = -0.2868754130     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324256496            -0.291099462041    
+          2       0        -0.199388395398            -0.286875412977    
+          3       0        -0.125537726900            -0.180620778741    
+          4       0        -0.105614178234            -0.151955237599    
+          5       0        -8.576049936573E-02        -0.123390223506    
+          6       0         3.380589952994E-02         4.863914657293E-02
+          7       0         5.372012093887E-02         7.729126787314E-02
+          8       0         7.521416697996E-02         0.108216404325    
+          9       0         0.122086644367             0.175655440990    
+         10       0         0.127580116694             0.183559321951    
+         11       0         0.129974905197             0.187004888277    
+         12       0         0.130506650535             0.187769951174    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993883947     CM-1    = -0.2868754120     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62694803E-02         1            0          -0.202324256496
+           2    2.73784186E-05         2            0          -0.199388395398
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925243677483E-001  -1.6508706223211E-001   5.0838035966532E-001  -8.6069846443536E-001
+    2    1 7.4756322517490E-004  -3.3271502440710E-001  -1.3578708431977E-002  -2.3731453863896E-002
+    1    2 7.4756322517490E-004  -3.3271502440710E-001  -1.3578708431977E-002  -2.3731453863896E-002
+    2    2 9.9925243677483E-001  -3.4298658210341E-004   9.9962382725748E-001  -2.1542409177535E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488035211662E-005   7.4373404691021E+001  -1.2904504278014E+001
+
+  USING POINTS   6  17 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3725341 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59546E+02 BOHR
+  A_17 =  7.43734E+01 -1.29045E+01 i  GIVES   A_REGULARISED = +1.91351E+05 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82509E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286543     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.374         BOHR      
+
+  SCATTERING LENGTH FOR POINT 17 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.634     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.402     -3.888E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.1       392.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    18:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2865427     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2865427    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027097
+    2     2     -0.0602160671
+    3     3     -0.0379128757
+    4     4     -0.0318958840
+    5     5     -0.0258999929
+    6     6      0.0102095080
+    7     7      0.0162236828
+    8     8      0.0227149709
+    9     9      0.0368706393
+   10    10      0.0385296911
+   11    11      0.0392529281
+   12    12      0.0394135168
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276843 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498300 GHZ
+  REFERENCE ENERGY IS                          -0.1993884146     CM-1    = -0.2868754407     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324279917            -0.291099495738    
+          2       0        -0.199388414649            -0.286875440675    
+          3       0        -0.125537726886            -0.180620778721    
+          4       0        -0.105614166731            -0.151955221049    
+          5       0        -8.576047529107E-02        -0.123390188868    
+          6       0         3.380588799763E-02         4.863912998050E-02
+          7       0         5.372012088865E-02         7.729126780089E-02
+          8       0         7.521417878217E-02         0.108216421306    
+          9       0         0.122086656971             0.175655459124    
+         10       0         0.127580135915             0.183559349606    
+         11       0         0.129974930057             0.187004924044    
+         12       0         0.130506673919             0.187769984818    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993884140     CM-1    = -0.2868754397     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62695202E-02         1            0          -0.202324279917
+           2    2.73784159E-05         2            0          -0.199388414649
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925242855659E-001  -1.6510936623533E-001   5.0825973414120E-001  -8.6076969696156E-001
+    2    1 7.4757144341386E-004  -3.3272617437794E-001  -1.3580445607833E-002  -2.3730632956298E-002
+    1    2 7.4757144341386E-004  -3.3272617437794E-001  -1.3580445607833E-002  -2.3730632956298E-002
+    2    2 9.9925242855659E-001  -3.4298252055598E-004   9.9962382320181E-001  -2.1542153990395E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488033774843E-005   7.4372531357771E+001  -1.2904647474494E+001
+
+  USING POINTS   6  18 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3735406 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59758E+02 BOHR
+  A_18 =  7.43725E+01 -1.29046E+01 i  GIVES   A_REGULARISED = -1.64929E+05 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82626E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286088     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.373         BOHR      
+
+  SCATTERING LENGTH FOR POINT 18 GIVES          A_RES =   12.905     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.634     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.401      4.507E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.0       455.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    19:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.2860877     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.2860877    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611027015
+    2     2     -0.0602160603
+    3     3     -0.0379128757
+    4     4     -0.0318958880
+    5     5     -0.0259000014
+    6     6      0.0102095121
+    7     7      0.0162236829
+    8     8      0.0227149668
+    9     9      0.0368706349
+   10    10      0.0385296844
+   11    11      0.0392529194
+   12    12      0.0394135086
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6276838 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498299 GHZ
+  REFERENCE ENERGY IS                          -0.1993883923     CM-1    = -0.2868754086     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202324252766            -0.291099456675    
+          2       0        -0.199388392333            -0.286875408566    
+          3       0        -0.125537726902            -0.180620778744    
+          4       0        -0.105614180066            -0.151955240235    
+          5       0        -8.576050319983E-02        -0.123390229022    
+          6       0         3.380590136656E-02         4.863914921541E-02
+          7       0         5.372012094687E-02         7.729126788465E-02
+          8       0         7.521416510036E-02         0.108216401621    
+          9       0         0.122086642360             0.175655438102    
+         10       0         0.127580113633             0.183559317547    
+         11       0         0.129974901238             0.187004882580    
+         12       0         0.130506646811             0.187769945815    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993883916     CM-1    = -0.2868754076     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62694739E-02         1            0          -0.202324252766
+           2    2.73784118E-05         2            0          -0.199388392333
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925243826873E-001  -1.6508351199971E-001   5.0839955931984E-001  -8.6068712454186E-001
+    2    1 7.4756173126996E-004  -3.3271324946927E-001  -1.3578430204353E-002  -2.3731581583524E-002
+    1    2 7.4756173126996E-004  -3.3271324946927E-001  -1.3578430204353E-002  -2.3731581583524E-002
+    2    2 9.9925243826873E-001  -3.4298693882803E-004   9.9962382799988E-001  -2.1542431598876E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488031619615E-005   7.4373500483032E+001  -1.2904481679925E+001
+
+  USING POINTS   6  19 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3734821 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_06 =  7.52472E+01 -1.26964E+01 i  GIVES   A_REGULARISED = +2.59746E+02 BOHR
+  A_19 =  7.43735E+01 -1.29045E+01 i  GIVES   A_REGULARISED = +9.03923E+06 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82619E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.286096     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.371         BOHR      
+
+  SCATTERING LENGTH FOR POINT 19 GIVES          A_RES =   12.904     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.634     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.401     -8.228E-06
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45       12.0       8.30    
+
+  MOVING INTERMEDIATE POINT AND PLACING NEW POINT AT TLO*|DELTA| FROM RESONANCE
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    20:  POTL SCALING FACTOR =   1.000000000     ;  MAGNETIC Z FIELD =   524.1851623     GAUSS
+
+  Coefficients of operators to be diagonalised to find asymptotic channels
+   operator # 1  0.000000000       0.000000000       0.000000000      3.3356409520E-02   524.1851623    
+
+  Calling multop for L =  0
+
+  W matrix has size     12
+
+  On this call to multop, operator number (i_op) = 1, IBEG =  1, and NCURR = 12
+
+
+  Eigenvalues of all operators for L =  0
+    1     1     -0.0611008826
+    2     2     -0.0602145653
+    3     3     -0.0379128768
+    4     4     -0.0318967814
+    5     5     -0.0259018712
+    6     6      0.0102104077
+    7     7      0.0162236867
+    8     8      0.0227140500
+    9     9      0.0368696561
+   10    10      0.0385281916
+   11    11      0.0392509888
+   12    12      0.0394116925
+
+
+  ATOM A WITH DOUBLED QUANTUM NOS  2  2 IS AT ENERGY  -1.6275651 GHZ
+  ATOM B WITH DOUBLED QUANTUM NOS  2  0 IS AT ENERGY  -4.3498001 GHZ
+  REFERENCE ENERGY IS                          -0.1993834419     CM-1    = -0.2868682860     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.202318229943            -0.291090791176    
+          2       0        -0.199383441872            -0.286868285958    
+          3       0        -0.125537730318            -0.180620783658    
+          4       0        -0.105617138239            -0.151959496385    
+          5       0        -8.576669451569E-02        -0.123399136944    
+          6       0         3.380886712186E-02         4.864341627556E-02
+          7       0         5.372013374021E-02         7.729128629142E-02
+          8       0         7.521112959943E-02         0.108212034212    
+          9       0         0.122083401154             0.175650774729    
+         10       0         0.127575170755             0.183552205848    
+         11       0         0.129968508540             0.186995684914    
+         12       0         0.130500633365             0.187761293809    
+
+  COUPLED EQUATIONS PROPAGATED AT                                 ENERGY =  6.9503480040E-10 K       
+  ABSOLUTE ENERGY  IS                          -0.1993834412     CM-1    = -0.2868682850     K       
+
+  MGPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM       4.6000  TO  30.000      IN  12700  STEPS.
+
+  AIPROP. LOG-DERIVATIVE MATRIX PROPAGATED FROM      30.0000  TO  10000.      IN    361  STEPS.
+
+  OPEN CHANNEL   WVEC (1/ANG.)    CHANNEL           L       PAIR ENERGY (CM-1)
+           1    5.62591964E-02         1            0          -0.202318229943
+           2    2.73784118E-05         2            0          -0.199383441872
+
+  ROW  COL       S**2                  PHASE/2PI              RE (S)                 IM (S)
+    1    1 9.9925479500871E-001  -1.5936386723828E-001   5.3899629033974E-001  -8.4186566268539E-001
+    2    1 7.4520499129470E-004  -3.2985394019626E-001  -1.3129166145963E-002  -2.3933866958902E-002
+    1    2 7.4520499129470E-004  -3.2985394019626E-001  -1.3129166145963E-002  -2.3933866958902E-002
+    2    2 9.9925479500870E-001  -3.4401315425173E-004   9.9962499289599E-001  -2.1606911839888E-003
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    2    0   1 1.4488031619615E-005   7.4596025861244E+001  -1.2863784333112E+001
+
+  USING POINTS  20  19 AND   4
+
+  USING PREVIOUS VALUE OF A_BG =   74.3714176 BOHR TO CALCULATE NEW "REGULARISED" SCATTERING LENGTHS
+  A_20 =  7.45960E+01 -1.28638E+01 i  GIVES   A_REGULARISED = +8.11332E+02 BOHR
+  A_19 =  7.43735E+01 -1.29045E+01 i  GIVES   A_REGULARISED = +8.00225E+04 BOHR
+  A_04 =  7.07347E+01 -1.24318E+01 i  GIVES   A_REGULARISED = +2.82378E+01 BOHR
+
+
+  3-POINT POLE FORMULA ESTIMATES MAGNETIC Z FIELD_RES =   524.287027     GAUSS
+                                                DELTA =   1.0093         GAUSS
+                                                 A_BG =   74.376         BOHR      
+
+  SCATTERING LENGTH FOR POINT 19 GIVES          A_RES =   12.904     BOHR      
+  THIS IMPLIES     GAMMA_INEL (= -2*A_BG*DELTA/A_RES) =  -11.635     GAUSS
+
+  DISTANCES FROM RESONANCE SCALED BY |DELTA|:   1.61     -0.101     -9.303E-04
+
+  3 POINTS IN THE VICINITY OF THE RESONANCE
+  DISTANCES FROM DESIRED POINT PLACEMENTS SCALED BY TOLERANCES:   2.45      3.693E-02   939.    
+
+  MOVING POINT CLOSEST TO THE RESONANCE AND PLACING NEW POINT AT THE PREDICTED RESONANCE POSITION
+
+  RESONANCE CHARACTERISATION NOT ACHIEVED IN  20 STEPS
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.01                              |
+ |                                                                            |
+ |                    This run used       6.59 cpu secs and                   |
+ |               1669 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

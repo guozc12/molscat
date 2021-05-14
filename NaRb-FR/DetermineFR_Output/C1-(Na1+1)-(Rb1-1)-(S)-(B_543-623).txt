@@ -1,0 +1,1002 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.01                              |
+ |                                                                            |
+ |                       Run on 05 May 2021   at 23:59:11                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.01             
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL (IPRINT) =  6     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  REDUCED MASS FOR INTERACTION =  18.180536600 ATOMIC MASS UNITS (DALTONS)
+
+  ======================================================================================================================
+  ATOM - ATOM IN UNCOUPLED BASIS  
+
+
+  ATOM A WITH S = 1/2,     MU_S   =    2.002296 MU_B
+              I = 3/2,     MU_NUC =   -0.000805 MU_B
+              HYPERFINE SPLITTING =    1.771626, COUPLING CONST =    0.885813 GHZ
+
+
+  ATOM B WITH S = 1/2,     MU_S   =    2.002331 MU_B
+              I = 3/2,     MU_NUC =   -0.000995 MU_B
+              HYPERFINE SPLITTING =    6.834683, COUPLING CONST =    3.417341 GHZ
+
+  L UP TO    0
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM IN UNCOUPLED BASIS  
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -3        -1        -3
+        2              -1        -3        -1        -1
+        3              -1        -3        -1         1
+        4              -1        -3        -1         3
+        5              -1        -3         1        -3
+        6              -1        -3         1        -1
+        7              -1        -3         1         1
+        8              -1        -3         1         3
+        9              -1        -1        -1        -3
+       10              -1        -1        -1        -1
+       11              -1        -1        -1         1
+       12              -1        -1        -1         3
+       13              -1        -1         1        -3
+       14              -1        -1         1        -1
+       15              -1        -1         1         1
+       16              -1        -1         1         3
+       17              -1         1        -1        -3
+       18              -1         1        -1        -1
+       19              -1         1        -1         1
+       20              -1         1        -1         3
+       21              -1         1         1        -3
+       22              -1         1         1        -1
+       23              -1         1         1         1
+       24              -1         1         1         3
+       25              -1         3        -1        -3
+       26              -1         3        -1        -1
+       27              -1         3        -1         1
+       28              -1         3        -1         3
+       29              -1         3         1        -3
+       30              -1         3         1        -1
+       31              -1         3         1         1
+       32              -1         3         1         3
+       33               1        -3        -1        -3
+       34               1        -3        -1        -1
+       35               1        -3        -1         1
+       36               1        -3        -1         3
+       37               1        -3         1        -3
+       38               1        -3         1        -1
+       39               1        -3         1         1
+       40               1        -3         1         3
+       41               1        -1        -1        -3
+       42               1        -1        -1        -1
+       43               1        -1        -1         1
+       44               1        -1        -1         3
+       45               1        -1         1        -3
+       46               1        -1         1        -1
+       47               1        -1         1         1
+       48               1        -1         1         3
+       49               1         1        -1        -3
+       50               1         1        -1        -1
+       51               1         1        -1         1
+       52               1         1        -1         3
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         1         1         3
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3         1        -3
+       62               1         3         1        -1
+       63               1         3         1         1
+       64               1         3         1         3
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  NaRb with short range refitted by J. M. Hutson 2021 using mid and long range from Wang et al., PRA 87, 050702 (2013)   
+
+  input gamma and beta unchanged
+  beta  =   2.208500000000     A-1
+  gamma =   5.008100000000    
+
+  For potential  1 at RLR =  11.30000000000     A
+                  with C6 =  12946359.63726     and C8 =  358980000.0000    
+  V_LR  =  -8.040325977745    cm-1
+  V_mid =  -8.040325973383    cm-1, dV/dR =   4.698002560472    cm-1/A
+  A(0) shifted from  -5030.508697830     cm-1
+                 to  -5030.508697834     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  8.4430898789592E-02 cm-1/A
+  Discontinuity / value is  1.7654380245707E-02
+
+  For potential  1 at RSR =  2.725600000000     A
+  V     =  -809.2483045167    cm-1, dV/dR =  -11445.28445598    cm-1/A and n =   4.061438610497    
+  B(SR) shifted from   0.000000000000     cm-1 A^n
+                  to   450828.6299011     cm-1 A^n
+  A(SR) shifted from   0.000000000000     cm-1
+                  to  -8490.090071421     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  NaRb with short range refitted by J. M. Hutson 2021 using mid and long range from Wang et al., PRA 87, 050702 (2013)   
+
+  input gamma and beta unchanged
+  beta  =   2.208500000000     A-1
+  gamma =   5.008100000000    
+
+  For potential  2 at RLR =  11.30000000000     A
+                  with C6 =  12946359.63726     and C8 =  358980000.0000    
+  V_LR  =  -7.866577497083    cm-1
+  V_mid =  -7.866577493536    cm-1, dV/dR =   4.644806568588    cm-1/A
+  A(0) shifted from  -203.3507085200     cm-1
+                 to  -203.3507085235     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.2307206571295     cm-1/A
+  Discontinuity / value is -5.2269181379228E-02
+
+  For potential  2 at RSR =  4.650000000000     A
+  V     =  -4.171236238351    cm-1, dV/dR =  -565.4419290973    cm-1/A and n =   11.49200000000    
+  B(SR) shifted from   0.000000000000     cm-1 A^n
+                  to   10710621685.47     cm-1 A^n
+  A(SR) shifted from   0.000000000000     cm-1
+                  to  -232.9656123524     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -1.00232065E+00 * R ** -3
+                 1.00000000E+00 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   4.600     RMID =   30.00     RMAX =  1.0000E+04
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      4.60 TO RMID =     30.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =     30.00 TO RMAX =  10000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  5.000E-02
+  STEP SIZE SCALES AS R**2.67
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  ======================================================================================================================
+
+  INPUT ENERGIES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT EUNITS =   2
+
+  INPUT ENERGY LIST IS
+                    6.950348E-10
+
+  CALCULATIONS WILL BE PERFORMED FOR    1 ENERGY  
+  ENERGY    1           =  6.9503480040E-10 CM-1 =  1.0000000000E-09 K       
+
+  ======================================================================================================================
+
+  PROGRAM WILL ATTEMPT TO CHARACTERISE RESONANCE IN SCATTERING LENGTH FOR CHANNEL   3 TO ACCURACY  1.00E-06 GAUSS
+  BETWEEN FLDMIN AND FLDMAX FOR MAGNETIC Z FIELD
+
+  USING FULL TREATMENT OF INELASTIC RESONANCE
+
+  THE CONVERGENCE PROCEDURE IS CONTROLLED BY PARAMETERS
+  TLO = -0.1000, THI =  1.0000 AND XI =  0.2500
+
+                  MAGNETIC Z FIELD (GAUSS )
+  FLDMIN:             400.0000000    
+  FLDMAX:             800.0000000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   0
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   2   2   2  -2
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       322 WORDS OF STORAGE USED.
+
+  ================================= 23Na-87Rb scattering length of Na|1,1> + Rb|1,-1> ==================================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   0   AND SYMMETRY BLOCK  =    2  ****************************
+  SYMMETRY BLOCK =   2 SELECTS PARITY  1
+  MTOT =  0/2
+  * * * NOTE.  FOR JTOT =   0,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   3
+
+  BASIS FUNCTION LIST:
+  BASIS FN        SET   ------ PAIR STATE QUANTUM NUMBERS ------           L 
+                            2*MSA     2*MIA     2*MSB     2*MIB 
+        1           8         -1        -3         1         3             0
+        2          12         -1        -1        -1         3             0
+        3          15         -1        -1         1         1             0
+        4          19         -1         1        -1         1             0
+        5          22         -1         1         1        -1             0
+        6          26         -1         3        -1        -1             0
+        7          29         -1         3         1        -3             0
+        8          36          1        -3        -1         3             0
+        9          39          1        -3         1         1             0
+       10          43          1        -1        -1         1             0
+       11          46          1        -1         1        -1             0
+       12          50          1         1        -1        -1             0
+       13          53          1         1         1        -3             0
+       14          57          1         3        -1        -3             0
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     1:  MAGNETIC Z FIELD =   400.0000000     GAUSS
+  REFERENCE ENERGY IS                          -0.1839018074     CM-1    = -0.2645936682     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.186368961942            -0.268143353160    
+          2       0        -0.186179229659            -0.267870370738    
+          3       0        -0.183901807359            -0.264593668192    
+          4       0        -0.134401396888            -0.193373622170    
+          5       0        -0.116429577700            -0.167516184273    
+          6       0        -9.962790291768E-02        -0.143342323090    
+          7       0         2.786612938132E-02         4.009314262434E-02
+          8       0         4.466068800632E-02         6.425676524488E-02
+          9       0         6.262539103631E-02         9.010396457885E-02
+         10       0         0.107648325442             0.154881921567    
+         11       0         0.107658343640             0.154896335519    
+         12       0         0.112140033823             0.161344487726    
+         13       0         0.114403223808             0.164600713147    
+         14       0         0.114600072248             0.164883934131    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488033774843E-005   8.3027527121545E+001  -4.4187676839859E-002
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     2:  MAGNETIC Z FIELD =   800.0000000     GAUSS
+  REFERENCE ENERGY IS                          -0.1946369539     CM-1    = -0.2800391488     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.206647717294            -0.297319957469    
+          2       0        -0.203525972948            -0.292828463885    
+          3       0        -0.194636953891            -0.280039148802    
+          4       0        -0.138323233657            -0.199016270232    
+          5       0        -0.108187722138            -0.155657993061    
+          6       0        -7.840215242998E-02        -0.112803204077    
+          7       0         6.647495051150E-03         9.564262174102E-03
+          8       0         3.641883244368E-02         5.239857403214E-02
+          9       0         6.654011164843E-02         9.573637407815E-02
+         10       0         0.107643316343             0.154874714591    
+         11       0         0.107663352739             0.154903542495    
+         12       0         0.122882296513             0.176800206899    
+         13       0         0.131757083254             0.189569044856    
+         14       0         0.134864595285             0.194040061314    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488034972193E-005   8.1607970869357E+001  -7.2368004428636E-002
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     3:  MAGNETIC Z FIELD =   600.0000000     GAUSS
+  REFERENCE ENERGY IS                          -0.1886422696     CM-1    = -0.2714141356     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.195025364076            -0.280597984393    
+          2       0        -0.194022188947            -0.279154639215    
+          3       0        -0.188642269577            -0.271414135621    
+          4       0        -0.137364567468            -0.197636963486    
+          5       0        -0.112532142206            -0.161908644202    
+          6       0        -8.886006690353E-02        -0.127849809610    
+          7       0         1.710185144594E-02         2.460574842597E-02
+          8       0         4.076325251243E-02         5.864922517400E-02
+          9       0         6.558500353786E-02         9.436218661298E-02
+         10       0         0.107645820892             0.154878318079    
+         11       0         0.107660848190             0.154899939007    
+         12       0         0.116884054119             0.168170074436    
+         13       0         0.122253299254             0.175895220186    
+         14       0         0.123245800145             0.177323207521    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488034732723E-005   8.1657531865821E+001  -6.9751481658951E-001
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   486.889603     GAUSS
+                             A_BG  (IN BOHR) =   81.909     +0.30727     i 
+                             A_RES (IN BOHR) =   1.2749     +0.82846     i 
+
+                                  GAMMA_INEL =  -210.50     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =   1.6382     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     4:  MAGNETIC Z FIELD =   486.8896026     GAUSS
+  REFERENCE ENERGY IS                          -0.1857953064     CM-1    = -0.2673179909     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.189612754337            -0.272810446653    
+          2       0        -0.189427443889            -0.272543826266    
+          3       0        -0.185795306447            -0.267317990898    
+          4       0        -0.135996530102            -0.195668662956    
+          5       0        -0.114825415529            -0.165208152833    
+          6       0        -9.493153055326E-02        -0.136585291123    
+          7       0         2.317130281715E-02         3.333833471909E-02
+          8       0         4.305652583496E-02         6.194873380467E-02
+          9       0         6.421897845043E-02         9.239678130285E-02
+         10       0         0.107647237345             0.154880356038    
+         11       0         0.107659431737             0.154897901047    
+         12       0         0.114035078711             0.164071034494    
+         13       0         0.117658554195             0.169284407237    
+         14       0         0.117835202685             0.169538565000    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488035211662E-005   8.2920244585886E+001  -1.8025688545791E-002
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   526.834906     GAUSS
+                             A_BG  (IN BOHR) =   81.766     +0.17026     i 
+                             A_RES (IN BOHR) =   1.0084      +1.0209     i 
+
+                                  GAMMA_INEL =  -112.48     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.69357     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     5:  MAGNETIC Z FIELD =   526.8349056     GAUSS
+  REFERENCE ENERGY IS                          -0.1867531609     CM-1    = -0.2686961297     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.191410237686            -0.275396624134    
+          2       0        -0.190976184901            -0.274772119024    
+          3       0        -0.186753160851            -0.268696129666    
+          4       0        -0.136564246989            -0.196485480886    
+          5       0        -0.114037242220            -0.164074147301    
+          6       0        -9.277912663732E-02        -0.133488462137    
+          7       0         2.101960954388E-02         3.024252818964E-02
+          8       0         4.226835252633E-02         6.081472827261E-02
+          9       0         6.478598469511E-02         9.321257677720E-02
+         10       0         0.107646737120             0.154879636326    
+         11       0         0.107659931962             0.154898620759    
+         12       0         0.114993643757             0.165450195718    
+         13       0         0.119207295208             0.171512699996    
+         14       0         0.119631975392             0.172123720025    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488035930072E-005   8.2965342094395E+001  -8.4463324097104E-004
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   593.674417     GAUSS
+                             A_BG  (IN BOHR) =   82.845     -4.76240E-02 i 
+                             A_RES (IN BOHR) =   10.632      +4.2749     i 
+
+                                  GAMMA_INEL =  -1.5052     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  9.65803E-02 GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     6:  MAGNETIC Z FIELD =   593.6744175     GAUSS
+  REFERENCE ENERGY IS                          -0.1884722469     CM-1    = -0.2711695109     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194697360928            -0.280126061050    
+          2       0        -0.193748745949            -0.278761215751    
+          3       0        -0.188472246888            -0.271169510907    
+          4       0        -0.137306678178            -0.197553673714    
+          5       0        -0.112664883150            -0.162099628804    
+          6       0        -8.919740039543E-02        -0.128335157238    
+          7       0         1.743907240323E-02         2.509093414200E-02
+          8       0         4.089599345656E-02         5.884020977514E-02
+          9       0         6.552722678230E-02         9.427905875301E-02
+         10       0         0.107645900106             0.154878432049    
+         11       0         0.107660768976             0.154899825036    
+         12       0         0.116713918896             0.167925287811    
+         13       0         0.121979856255             0.175501796723    
+         14       0         0.122917909533             0.176851446089    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488035211662E-005   8.1564854839873E+001  -1.0830614633807E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   579.778748     GAUSS
+                             A_BG  (IN BOHR) =   82.504     -4.99040E-03 i 
+                             A_RES (IN BOHR) =   2.3156     +0.48264     i 
+
+                                  GAMMA_INEL =  -21.080     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.29582     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     7:  MAGNETIC Z FIELD =   579.7787476     GAUSS
+  REFERENCE ENERGY IS                          -0.1881031467     CM-1    = -0.2706384581     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.193986744508            -0.279103642575    
+          2       0        -0.193154585104            -0.277906350866    
+          3       0        -0.188103146736            -0.270638458143    
+          4       0        -0.137172312137            -0.197360350960    
+          5       0        -0.112954905764            -0.162516906634    
+          6       0        -8.993952105513E-02        -0.129402903284    
+          7       0         1.818094585349E-02         2.615832450840E-02
+          8       0         4.118601606987E-02         5.925748760517E-02
+          9       0         6.539310795046E-02         9.408609167890E-02
+         10       0         0.107646074118             0.154878682414    
+         11       0         0.107660594964             0.154899574672    
+         12       0         0.116344571534             0.167393879368    
+         13       0         0.121385695410             0.174646931837    
+         14       0         0.122207540322             0.175829383294    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488036169542E-005   8.3512996949002E+001  -2.2759816197454E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.396262     GAUSS
+                             A_BG  (IN BOHR) =   82.343     -6.27415E-03 i 
+                             A_RES (IN BOHR) =   2.3593     +0.99583     i 
+
+                                  GAMMA_INEL =  -16.117     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.23090     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     8:  MAGNETIC Z FIELD =   580.3962620     GAUSS
+  REFERENCE ENERGY IS                          -0.1881194205     CM-1    = -0.2706618724     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194018030536            -0.279148656188    
+          2       0        -0.193180796909            -0.277944063804    
+          3       0        -0.188119420464            -0.270661872406    
+          4       0        -0.137178496733            -0.197369249215    
+          5       0        -0.112942065015            -0.162498431661    
+          6       0        -8.990651098210E-02        -0.129355409154    
+          7       0         1.814794676629E-02         2.611084618474E-02
+          8       0         4.117317532119E-02         5.923901263288E-02
+          9       0         6.539928156132E-02         9.409497412745E-02
+         10       0         0.107646066385             0.154878671288    
+         11       0         0.107660602697             0.154899585798    
+         12       0         0.116360856248             0.167417309437    
+         13       0         0.121411907215             0.174684644776    
+         14       0         0.122238815364             0.175874381101    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488032816964E-005   8.3346840299136E+001  -2.3655205849360E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.403803     GAUSS
+                             A_BG  (IN BOHR) =   82.341     -6.29630E-03 i 
+                             A_RES (IN BOHR) =   2.3602      +1.0033     i 
+
+                                  GAMMA_INEL =  -16.058     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.23013     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET     9:  MAGNETIC Z FIELD =   580.4038029     GAUSS
+  REFERENCE ENERGY IS                          -0.1881196193     CM-1    = -0.2706621584     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194018412760            -0.279149206124    
+          2       0        -0.193181117109            -0.277944524502    
+          3       0        -0.188119619267            -0.270662158440    
+          4       0        -0.137178572133            -0.197369357699    
+          5       0        -0.112941908180            -0.162498206011    
+          6       0        -8.990610789178E-02        -0.129354829197    
+          7       0         1.814754381012E-02         2.611026642073E-02
+          8       0         4.117301848633E-02         5.923878698251E-02
+          9       0         6.539935682729E-02         9.409508241839E-02
+         10       0         0.107646066290             0.154878671152    
+         11       0         0.107660602791             0.154899585934    
+         12       0         0.116361055186             0.167417595664    
+         13       0         0.121412227416             0.174685105473    
+         14       0         0.122239197454             0.175874930843    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488035211662E-005   8.3344749335700E+001  -2.3664639384672E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.403922     GAUSS
+                             A_BG  (IN BOHR) =   82.341     -6.29656E-03 i 
+                             A_RES (IN BOHR) =   2.3602      +1.0034     i 
+
+                                  GAMMA_INEL =  -16.057     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.23012     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    10:  MAGNETIC Z FIELD =   580.4039224     GAUSS
+  REFERENCE ENERGY IS                          -0.1881196224     CM-1    = -0.2706621630     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194018418818            -0.279149214840    
+          2       0        -0.193181122184            -0.277944531804    
+          3       0        -0.188119622418            -0.270662162974    
+          4       0        -0.137178573328            -0.197369359418    
+          5       0        -0.112941905695            -0.162498202435    
+          6       0        -8.990610150319E-02        -0.129354820005    
+          7       0         1.814753742366E-02         2.611025723203E-02
+          8       0         4.117301600064E-02         5.923878340617E-02
+          9       0         6.539935802015E-02         9.409508413466E-02
+         10       0         0.107646066289             0.154878671150    
+         11       0         0.107660602793             0.154899585936    
+         12       0         0.116361058339             0.167417600200    
+         13       0         0.121412232490             0.174685112775    
+         14       0         0.122239203510             0.175874939556    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488029703856E-005   8.3344660642337E+001  -2.3664788950740E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.403873     GAUSS
+                             A_BG  (IN BOHR) =   82.341     -6.29656E-03 i 
+                             A_RES (IN BOHR) =   2.3602      +1.0034     i 
+
+                                  GAMMA_INEL =  -16.057     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.23012     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    11:  MAGNETIC Z FIELD =   580.4038728     GAUSS
+  REFERENCE ENERGY IS                          -0.1881196211     CM-1    = -0.2706621611     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194018416306            -0.279149211225    
+          2       0        -0.193181120080            -0.277944528775    
+          3       0        -0.188119621111            -0.270662161094    
+          4       0        -0.137178572833            -0.197369358705    
+          5       0        -0.112941906725            -0.162498203918    
+          6       0        -8.990610415262E-02        -0.129354823817    
+          7       0         1.814754007221E-02         2.611026104270E-02
+          8       0         4.117301703149E-02         5.923878488932E-02
+          9       0         6.539935752546E-02         9.409508342290E-02
+         10       0         0.107646066289             0.154878671151    
+         11       0         0.107660602792             0.154899585935    
+         12       0         0.116361057031             0.167417598319    
+         13       0         0.121412230386             0.174685109747    
+         14       0         0.122239200998             0.175874935943    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488036169542E-005   8.3344734860930E+001  -2.3664726651064E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.403928     GAUSS
+                             A_BG  (IN BOHR) =   82.341     -6.29657E-03 i 
+                             A_RES (IN BOHR) =   2.3602      +1.0034     i 
+
+                                  GAMMA_INEL =  -16.057     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.23012     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    12:  MAGNETIC Z FIELD =   580.4039281     GAUSS
+  REFERENCE ENERGY IS                          -0.1881196226     CM-1    = -0.2706621632     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194018419106            -0.279149215255    
+          2       0        -0.193181122426            -0.277944532151    
+          3       0        -0.188119622568            -0.270662163189    
+          4       0        -0.137178573385            -0.197369359500    
+          5       0        -0.112941905576            -0.162498202264    
+          6       0        -8.990610119898E-02        -0.129354819568    
+          7       0         1.814753711954E-02         2.611025679448E-02
+          8       0         4.117301588228E-02         5.923878323587E-02
+          9       0         6.539935807696E-02         9.409508421639E-02
+         10       0         0.107646066289             0.154878671150    
+         11       0         0.107660602793             0.154899585936    
+         12       0         0.116361058489             0.167417600416    
+         13       0         0.121412232732             0.174685113123    
+         14       0         0.122239203798             0.175874939971    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488033056434E-005   8.3344685294801E+001  -2.3664795900245E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.403897     GAUSS
+                             A_BG  (IN BOHR) =   82.341     -6.29656E-03 i 
+                             A_RES (IN BOHR) =   2.3602      +1.0034     i 
+
+                                  GAMMA_INEL =  -16.057     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.23012     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    13:  MAGNETIC Z FIELD =   578.7982209     GAUSS
+  REFERENCE ENERGY IS                          -0.1880773310     CM-1    = -0.2706013151     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.193937123262            -0.279032248673    
+          2       0        -0.193113001458            -0.277846521278    
+          3       0        -0.188077331034            -0.270601315108    
+          4       0        -0.137162450575            -0.197346162373    
+          5       0        -0.112975285720            -0.162546228843    
+          6       0        -8.999194216925E-02        -0.129478325571    
+          7       0         1.823334952366E-02         2.623372169734E-02
+          8       0         4.120639602610E-02         5.928680981497E-02
+          9       0         6.538326383241E-02         9.407192818947E-02
+         10       0         0.107646086397             0.154878700080    
+         11       0         0.107660582685             0.154899557005    
+         12       0         0.116318738388             0.167356711234    
+         13       0         0.121344111764             0.174587102249    
+         14       0         0.122157936519             0.175758014489    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488033295904E-005   8.3738378782000E+001  -2.0919125466803E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.691588     GAUSS
+                             A_BG  (IN BOHR) =   82.389     -7.25912E-03 i 
+                             A_RES (IN BOHR) =   2.3923     +0.87359     i 
+
+                                  GAMMA_INEL =  -16.604     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24106     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    14:  MAGNETIC Z FIELD =   580.6915880     GAUSS
+  REFERENCE ENERGY IS                          -0.1881272076     CM-1    = -0.2706730764     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194033002793            -0.279170197926    
+          2       0        -0.193193339062            -0.277962109164    
+          3       0        -0.188127207617            -0.270673076383    
+          4       0        -0.137181447422            -0.197373494598    
+          5       0        -0.112935922327            -0.162489593703    
+          6       0        -8.989072491450E-02        -0.129332696525    
+          7       0         1.813216595265E-02         2.608814111497E-02
+          8       0         4.116703263274E-02         5.923017467477E-02
+          9       0         6.540222699624E-02         9.409921195111E-02
+         10       0         0.107646062686             0.154878665967    
+         11       0         0.107660606395             0.154899591119    
+         12       0         0.116368648655             0.167428520973    
+         13       0         0.121424449368             0.174702690135    
+         14       0         0.122253782367             0.175895915279    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488034972193E-005   8.3262472627168E+001  -2.3995706351404E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.685328     GAUSS
+                             A_BG  (IN BOHR) =   82.388     -7.23769E-03 i 
+                             A_RES (IN BOHR) =   2.3917     +0.87581     i 
+
+                                  GAMMA_INEL =  -16.596     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24088     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    15:  MAGNETIC Z FIELD =   580.6853279     GAUSS
+  REFERENCE ENERGY IS                          -0.1881270425     CM-1    = -0.2706728388     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194032685354            -0.279169741202    
+          2       0        -0.193193073157            -0.277961726587    
+          3       0        -0.188127042521            -0.270672838846    
+          4       0        -0.137181384923            -0.197373404675    
+          5       0        -0.112936052547            -0.162489781061    
+          6       0        -8.989105953256E-02        -0.129333177966    
+          7       0         1.813250045934E-02         2.608862239546E-02
+          8       0         4.116716285295E-02         5.923036203260E-02
+          9       0         6.540216460804E-02         9.409912218841E-02
+         10       0         0.107646062765             0.154878666080    
+         11       0         0.107660606317             0.154899591006    
+         12       0         0.116368483448             0.167428283275    
+         13       0         0.121424183463             0.174702307558    
+         14       0         0.122253465039             0.175895458715    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488035211662E-005   8.3264277038015E+001  -2.3989115495436E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.685324     GAUSS
+                             A_BG  (IN BOHR) =   82.388     -7.23824E-03 i 
+                             A_RES (IN BOHR) =   2.3917     +0.87581     i 
+
+                                  GAMMA_INEL =  -16.596     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24088     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    16:  MAGNETIC Z FIELD =   580.6853245     GAUSS
+  REFERENCE ENERGY IS                          -0.1881270424     CM-1    = -0.2706728387     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194032685182            -0.279169740955    
+          2       0        -0.193193073013            -0.277961726380    
+          3       0        -0.188127042432            -0.270672838717    
+          4       0        -0.137181384889            -0.197373404626    
+          5       0        -0.112936052617            -0.162489781162    
+          6       0        -8.989105971344E-02        -0.129333178226    
+          7       0         1.813250064016E-02         2.608862265561E-02
+          8       0         4.116716292334E-02         5.923036213388E-02
+          9       0         6.540216457431E-02         9.409912213989E-02
+         10       0         0.107646062765             0.154878666080    
+         11       0         0.107660606317             0.154899591006    
+         12       0         0.116368483358             0.167428283147    
+         13       0         0.121424183319             0.174702307351    
+         14       0         0.122253464868             0.175895458468    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488032816964E-005   8.3264262808132E+001  -2.3989112017381E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.685123     GAUSS
+                             A_BG  (IN BOHR) =   82.388     -7.23826E-03 i 
+                             A_RES (IN BOHR) =   2.3917     +0.87588     i 
+
+                                  GAMMA_INEL =  -16.595     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24087     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    17:  MAGNETIC Z FIELD =   580.6851226     GAUSS
+  REFERENCE ENERGY IS                          -0.1881270371     CM-1    = -0.2706728311     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194032674946            -0.279169726226    
+          2       0        -0.193193064438            -0.277961714042    
+          3       0        -0.188127037108            -0.270672831057    
+          4       0        -0.137181382873            -0.197373401727    
+          5       0        -0.112936056817            -0.162489787204    
+          6       0        -8.989107050429E-02        -0.129333193752    
+          7       0         1.813251142742E-02         2.608863817608E-02
+          8       0         4.116716712270E-02         5.923036817583E-02
+          9       0         6.540216256237E-02         9.409911924515E-02
+         10       0         0.107646062767             0.154878666083    
+         11       0         0.107660606314             0.154899591002    
+         12       0         0.116368478031             0.167428275482    
+         13       0         0.121424174744             0.174702295014    
+         14       0         0.122253454635             0.175895443745    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488034014313E-005   8.3264334600665E+001  -2.3988898958694E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.685303     GAUSS
+                             A_BG  (IN BOHR) =   82.388     -7.23826E-03 i 
+                             A_RES (IN BOHR) =   2.3917     +0.87581     i 
+
+                                  GAMMA_INEL =  -16.596     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24088     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    18:  MAGNETIC Z FIELD =   580.6853033     GAUSS
+  REFERENCE ENERGY IS                          -0.1881270419     CM-1    = -0.2706728379     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194032684110            -0.279169739413    
+          2       0        -0.193193072115            -0.277961725088    
+          3       0        -0.188127041874            -0.270672837915    
+          4       0        -0.137181384678            -0.197373404323    
+          5       0        -0.112936053057            -0.162489781795    
+          6       0        -8.989106084340E-02        -0.129333179852    
+          7       0         1.813250176975E-02         2.608862428085E-02
+          8       0         4.116716336308E-02         5.923036276656E-02
+          9       0         6.540216436363E-02         9.409912183677E-02
+         10       0         0.107646062765             0.154878666080    
+         11       0         0.107660606316             0.154899591005    
+         12       0         0.116368482800             0.167428282344    
+         13       0         0.121424182421             0.174702306059    
+         14       0         0.122253463796             0.175895456927    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488032816964E-005   8.3264273409608E+001  -2.3989089702088E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.685182     GAUSS
+                             A_BG  (IN BOHR) =   82.388     -7.23825E-03 i 
+                             A_RES (IN BOHR) =   2.3917     +0.87586     i 
+
+                                  GAMMA_INEL =  -16.595     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24087     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    19:  MAGNETIC Z FIELD =   580.6851825     GAUSS
+  REFERENCE ENERGY IS                          -0.1881270387     CM-1    = -0.2706728333     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194032677982            -0.279169730595    
+          2       0        -0.193193066982            -0.277961717701    
+          3       0        -0.188127038687            -0.270672833329    
+          4       0        -0.137181383471            -0.197373402587    
+          5       0        -0.112936055571            -0.162489785412    
+          6       0        -8.989106730378E-02        -0.129333189147    
+          7       0         1.813250822798E-02         2.608863357280E-02
+          8       0         4.116716587720E-02         5.923036638382E-02
+          9       0         6.540216315910E-02         9.409912010371E-02
+         10       0         0.107646062767             0.154878666082    
+         11       0         0.107660606315             0.154899591003    
+         12       0         0.116368479611             0.167428277755    
+         13       0         0.121424177288             0.174702298673    
+         14       0         0.122253457670             0.175895448112    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488035690602E-005   8.3264336787662E+001  -2.3988962013512E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.685562     GAUSS
+                             A_BG  (IN BOHR) =   82.389     -7.23824E-03 i 
+                             A_RES (IN BOHR) =   2.3917     +0.87572     i 
+
+                                  GAMMA_INEL =  -16.596     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24089     GAUSS
+
+  ----------------------------------------------------------------------------------------------------------------------
+
+  EFV SET    20:  MAGNETIC Z FIELD =   580.6855615     GAUSS
+  REFERENCE ENERGY IS                          -0.1881270487     CM-1    = -0.2706728477     K       
+
+  THRESHOLDS CALCULATED FROM ASYMPTOTIC HAMILTONIAN:
+
+  THRESHOLD       L           ENERGY/CM-1                ENERGY/K
+          1       0        -0.194032697202            -0.279169758249    
+          2       0        -0.193193083082            -0.277961740866    
+          3       0        -0.188127048683            -0.270672847712    
+          4       0        -0.137181387255            -0.197373408031    
+          5       0        -0.112936047686            -0.162489774068    
+          6       0        -8.989104704297E-02        -0.129333159996    
+          7       0         1.813248797391E-02         2.608860443171E-02
+          8       0         4.116715799250E-02         5.923035503950E-02
+          9       0         6.540216693671E-02         9.409912553885E-02
+         10       0         0.107646062762             0.154878666075    
+         11       0         0.107660606320             0.154899591010    
+         12       0         0.116368489614             0.167428292147    
+         13       0         0.121424193388             0.174702321838    
+         14       0         0.122253476884             0.175895475756    
+
+  K-DEPENDENT SCATTERING LENGTHS/VOLUMES/HYPERVOLUMES FOR CHANNELS WITH LOW KINETIC ENERGY
+  CHAN   L POW     WVEC*BOHR             RE(A)/BOHR            IM(A)/BOHR      
+    3    0   1 1.4488037366890E-005   8.3264241660324E+001  -2.3989361772259E+000
+
+  PARAMETERS OBTAINED ARE:
+                        MAGNETIC Z FIELD_RES =   580.685749     GAUSS
+                             A_BG  (IN BOHR) =   82.389     -7.23818E-03 i 
+                             A_RES (IN BOHR) =   2.3917     +0.87566     i 
+
+                                  GAMMA_INEL =  -16.596     GAUSS
+  DELTA (= -ALPHA_RES*GAMMA_INEL/2*ALPHA_BG) =  0.24089     GAUSS
+
+  RESONANCE CHARACTERISATION NOT ACHIEVED IN  20 STEPS
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.01                              |
+ |                                                                            |
+ |                    This run used       8.88 cpu secs and                   |
+ |               2092 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

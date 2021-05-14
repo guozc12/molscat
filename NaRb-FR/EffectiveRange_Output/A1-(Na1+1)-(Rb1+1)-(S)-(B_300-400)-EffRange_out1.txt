@@ -1,0 +1,1298 @@
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.01                              |
+ |                                                                            |
+ |                       Run on 06 May 2021   at 00:53:46                     |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License, version 3, as published by
+  the Free Software Foundation.
+
+  Publications resulting from the use of this program should cite both
+  the version of the program used:
+  J. M. Hutson & C. R. Le Sueur, MOLSCAT computer code 2020.01             
+  and the published paper:
+  J. M. Hutson & C. R. Le Sueur, Comput. Phys. Commun. 241, pp 9-18 (2019).
+
+
+  USING CODATA 2018 RECOMMENDED VALUES OF FUNDAMENTAL PHYSICAL CONSTANTS
+
+  MEMORY ALLOCATED TO MAIN WORKING ARRAY IS   1000000 (8-BYTE) WORDS (    7.63 MB)
+  2 INTEGERS CAN BE STORED IN EACH WORD.
+
+  PRINT LEVEL (IPRINT) =  1     OTHER PRINT CONTROLS  ISIGPR = 0
+
+  REDUCED MASS FOR INTERACTION =  18.180536600 ATOMIC MASS UNITS (DALTONS)
+
+  NO SCRATCH FILE SPECIFIED BY ISCRU PARAMETER: FULL CALCULATION WILL BE DONE AT EVERY ENERGY
+
+  ======================================================================================================================
+  ATOM - ATOM IN UNCOUPLED BASIS  
+
+
+  ATOM A WITH S = 1/2,     MU_S   =    2.002296 MU_B
+              I = 3/2,     MU_NUC =   -0.000805 MU_B
+              HYPERFINE SPLITTING =    1.771626, COUPLING CONST =    0.885813 GHZ
+
+
+  ATOM B WITH S = 1/2,     MU_S   =    2.002331 MU_B
+              I = 3/2,     MU_NUC =   -0.000995 MU_B
+              HYPERFINE SPLITTING =    6.834683, COUPLING CONST =    3.417341 GHZ
+
+  L UP TO    0
+  SPIN-SPIN TERM INCLUDED
+
+  INTERACTION TYPE IS  ATOM - ATOM IN UNCOUPLED BASIS  
+
+  QUANTUM NUMBERS FOR INTERACTING PAIR:
+  THE BASIS FUNCTIONS ARE LABELLED BY A SET OF   4 PAIR STATE QUANTUM NUMBERS AND A VALUE OF L.
+  THE RESULTING BASIS SET IS ASYMPTOTICALLY NON-DIAGONAL.
+
+  THE SETS OF PAIR STATE QUANTUM NUMBERS ARE:
+
+      SET       ------ PAIR STATE QUANTUM NUMBERS ------
+                    2*MSA     2*MIA     2*MSB     2*MIB
+        1              -1        -3        -1        -3
+        2              -1        -3        -1        -1
+        3              -1        -3        -1         1
+        4              -1        -3        -1         3
+        5              -1        -3         1        -3
+        6              -1        -3         1        -1
+        7              -1        -3         1         1
+        8              -1        -3         1         3
+        9              -1        -1        -1        -3
+       10              -1        -1        -1        -1
+       11              -1        -1        -1         1
+       12              -1        -1        -1         3
+       13              -1        -1         1        -3
+       14              -1        -1         1        -1
+       15              -1        -1         1         1
+       16              -1        -1         1         3
+       17              -1         1        -1        -3
+       18              -1         1        -1        -1
+       19              -1         1        -1         1
+       20              -1         1        -1         3
+       21              -1         1         1        -3
+       22              -1         1         1        -1
+       23              -1         1         1         1
+       24              -1         1         1         3
+       25              -1         3        -1        -3
+       26              -1         3        -1        -1
+       27              -1         3        -1         1
+       28              -1         3        -1         3
+       29              -1         3         1        -3
+       30              -1         3         1        -1
+       31              -1         3         1         1
+       32              -1         3         1         3
+       33               1        -3        -1        -3
+       34               1        -3        -1        -1
+       35               1        -3        -1         1
+       36               1        -3        -1         3
+       37               1        -3         1        -3
+       38               1        -3         1        -1
+       39               1        -3         1         1
+       40               1        -3         1         3
+       41               1        -1        -1        -3
+       42               1        -1        -1        -1
+       43               1        -1        -1         1
+       44               1        -1        -1         3
+       45               1        -1         1        -3
+       46               1        -1         1        -1
+       47               1        -1         1         1
+       48               1        -1         1         3
+       49               1         1        -1        -3
+       50               1         1        -1        -1
+       51               1         1        -1         1
+       52               1         1        -1         3
+       53               1         1         1        -3
+       54               1         1         1        -1
+       55               1         1         1         1
+       56               1         1         1         3
+       57               1         3        -1        -3
+       58               1         3        -1        -1
+       59               1         3        -1         1
+       60               1         3        -1         3
+       61               1         3         1        -3
+       62               1         3         1        -1
+       63               1         3         1         1
+       64               1         3         1         3
+
+  ======================================================================================================================
+
+  THIS CALCULATION USES  1 EXTERNAL FIELD VARIABLE 
+
+  OFFSET BETWEEN EFV INDICES AND COUPLING MATRIX COEFFICIENT INDICES IS  1
+  GENERAL-PURPOSE POTENL ROUTINE (MAY 18)
+
+  *** POTENL. ITYPE =   9 CANNOT BE PROCESSED TO DETERMINE THE POTENTIAL EXPANSION LABELS
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   1
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  NaRb with short range refitted by J. M. Hutson 2021 using mid and long range from Wang et al., PRA 87, 050702 (2013)   
+
+  input gamma and beta unchanged
+  beta  =   2.208500000000     A-1
+  gamma =   5.008100000000    
+
+  For potential  1 at RLR =  11.30000000000     A
+                  with C6 =  12946359.63726     and C8 =  358980000.0000    
+  V_LR  =  -8.040325977745    cm-1
+  V_mid =  -8.040325973383    cm-1, dV/dR =   4.698002560472    cm-1/A
+  A(0) shifted from  -5030.508697830     cm-1
+                 to  -5030.508697834     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is  8.4430898789592E-02 cm-1/A
+  Discontinuity / value is  1.7654380245707E-02
+
+  For potential  1 at RSR =  2.725600000000     A
+  V     =  -809.2483045167    cm-1, dV/dR =  -11445.28445598    cm-1/A and n =   4.061438610497    
+  B(SR) shifted from   0.000000000000     cm-1 A^n
+                  to   450828.6299011     cm-1 A^n
+  A(SR) shifted from   0.000000000000     cm-1
+                  to  -8490.090071421     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   2
+
+  JMH routine for Tiemann-style alkali dimer potentials
+  NaRb with short range refitted by J. M. Hutson 2021 using mid and long range from Wang et al., PRA 87, 050702 (2013)   
+
+  input gamma and beta unchanged
+  beta  =   2.208500000000     A-1
+  gamma =   5.008100000000    
+
+  For potential  2 at RLR =  11.30000000000     A
+                  with C6 =  12946359.63726     and C8 =  358980000.0000    
+  V_LR  =  -7.866577497083    cm-1
+  V_mid =  -7.866577493536    cm-1, dV/dR =   4.644806568588    cm-1/A
+  A(0) shifted from  -203.3507085200     cm-1
+                 to  -203.3507085235     cm-1 to match value of V(R) at RLR
+  Derivative discontinuity at RLR (intrinsic to functional form) is -0.2307206571295     cm-1/A
+  Discontinuity / value is -5.2269181379228E-02
+
+  For potential  2 at RSR =  4.650000000000     A
+  V     =  -4.171236238351    cm-1, dV/dR =  -565.4419290973    cm-1/A and n =   11.49200000000    
+  B(SR) shifted from   0.000000000000     cm-1 A^n
+                  to   10710621685.47     cm-1 A^n
+  A(SR) shifted from   0.000000000000     cm-1
+                  to  -232.9656123524     cm-1
+
+  INTERACTION POTENTIAL FOR EXPANSION TERM NUMBER   3
+
+                -1.00232065E+00 * R ** -3
+                 1.00000000E+00 * EXP(   -0.7196 * R )
+
+  POTENL PROCESSING FINISHED.
+
+  POTENTIAL RETURNED IN UNITS OF EPSIL  =  1.0000000     CM-1
+        CODED WITH R IN UNITS OF RM     = 0.52917721     ANGSTROM
+
+  ALL LENGTHS ARE IN UNITS OF BOHR (  0.52917721 ANGSTROM ) UNLESS OTHERWISE STATED
+
+  INTERACTION MATRIX USES   3 BLOCKS OF VL ARRAY FOR R-DEPENDENT TERMS IN POTENTIAL
+                            2                    FOR CONSTANT    TERMS IN POTENTIAL
+
+  IN TOTAL:  5 BLOCKS OF VL ARRAY ARE USED
+
+
+  ======================================================================================================================
+
+  PROPAGATION METHODS FOR COUPLED EQUATIONS SPECIFIED BY IPROPS =  8 AND IPROPL =  9
+
+  COUPLED EQUATIONS WILL BE PROPAGATED OUTWARDS IN 2 SEGMENTS
+
+  PROPAGATION RANGES ARE CONTROLLED BY VARIABLES RMIN, RMID AND RMAX, WITH INPUT VALUES
+  RMIN =   4.600     RMID =   30.00     RMAX =  1.0000E+04
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 1 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMIN =      4.60 TO RMID =     30.00
+
+  COUPLED EQUATIONS SOLVED BY SYMPLECTIC LOG-DERIVATIVE PROPAGATOR OF MANOLOPOULOS AND GRAY
+  USING THE FIVE-STEP FOURTH-ORDER METHOD OF CALVO AND SANZ-SERNA
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  2.000E-03
+  STEP SIZE CONSTANT THROUGHOUT RANGE
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  LOG-DERIVATIVE MATRIX INITIALISED IN THE LOCAL EIGENBASIS AT RMIN
+  LOCALLY CLOSED CHANNELS INITIALISED WITH A WKB BOUNDARY CONDITION
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  SEGMENT 2 WILL BE PROPAGATED OUTWARDS
+
+  FROM RMID =     30.00 TO RMAX =  10000.00
+
+  COUPLED EQUATIONS SOLVED BY VARIABLE-STEP AIRY PROPAGATOR.
+  PUBLICATIONS RESULTING FROM THE USE OF THIS PROPAGATOR SHOULD REFERENCE
+  M. H. ALEXANDER AND D. E. MANOLOPOULOS,  J. CHEM. PHYS. 86, 2044 (1987).
+
+  PROPAGATION STEP SIZE DETERMINED USING DR =  5.000E-02
+  STEP SIZE SCALES AS R**2.67
+  STEP SIZE MAY BE ADJUSTED SLIGHTLY SO THAT RANGE IS A WHOLE NUMBER OF STEPS
+
+  ======================================================================================================================
+
+  INPUT ENERGIES CONVERTED FROM K
+  TO INTERNAL WORKING UNITS OF CM-1 DUE TO INTEGER INPUT EUNITS =   2
+
+  INPUT ENERGY LIST IS
+                    6.950348E-08    1.390070E-07
+
+  CALCULATIONS WILL BE PERFORMED FOR    2 ENERGIES
+  ENERGY    1           =  6.9503480040E-08 CM-1 =  1.0000000000E-07 K       
+  ENERGY    2           =  1.3900696008E-07 CM-1 =  2.0000000000E-07 K       
+
+  ======================================================================================================================
+
+  CONTROL DATA FOR EXTERNAL FIELD VARIABLES.  CALCULATIONS WILL BE PERFORMED FOR 201 SETS
+
+                  MAGNETIC Z FIELD (GAUSS )
+  SET     1:          300.0000000    
+  SET     2:          300.5000000    
+  SET     3:          301.0000000    
+  SET     4:          301.5000000    
+  SET     5:          302.0000000    
+  SET     6:          302.5000000    
+  SET     7:          303.0000000    
+  SET     8:          303.5000000    
+  SET     9:          304.0000000    
+  SET    10:          304.5000000    
+  SET    11:          305.0000000    
+  SET    12:          305.5000000    
+  SET    13:          306.0000000    
+  SET    14:          306.5000000    
+  SET    15:          307.0000000    
+  SET    16:          307.5000000    
+  SET    17:          308.0000000    
+  SET    18:          308.5000000    
+  SET    19:          309.0000000    
+  SET    20:          309.5000000    
+  SET    21:          310.0000000    
+  SET    22:          310.5000000    
+  SET    23:          311.0000000    
+  SET    24:          311.5000000    
+  SET    25:          312.0000000    
+  SET    26:          312.5000000    
+  SET    27:          313.0000000    
+  SET    28:          313.5000000    
+  SET    29:          314.0000000    
+  SET    30:          314.5000000    
+  SET    31:          315.0000000    
+  SET    32:          315.5000000    
+  SET    33:          316.0000000    
+  SET    34:          316.5000000    
+  SET    35:          317.0000000    
+  SET    36:          317.5000000    
+  SET    37:          318.0000000    
+  SET    38:          318.5000000    
+  SET    39:          319.0000000    
+  SET    40:          319.5000000    
+  SET    41:          320.0000000    
+  SET    42:          320.5000000    
+  SET    43:          321.0000000    
+  SET    44:          321.5000000    
+  SET    45:          322.0000000    
+  SET    46:          322.5000000    
+  SET    47:          323.0000000    
+  SET    48:          323.5000000    
+  SET    49:          324.0000000    
+  SET    50:          324.5000000    
+  SET    51:          325.0000000    
+  SET    52:          325.5000000    
+  SET    53:          326.0000000    
+  SET    54:          326.5000000    
+  SET    55:          327.0000000    
+  SET    56:          327.5000000    
+  SET    57:          328.0000000    
+  SET    58:          328.5000000    
+  SET    59:          329.0000000    
+  SET    60:          329.5000000    
+  SET    61:          330.0000000    
+  SET    62:          330.5000000    
+  SET    63:          331.0000000    
+  SET    64:          331.5000000    
+  SET    65:          332.0000000    
+  SET    66:          332.5000000    
+  SET    67:          333.0000000    
+  SET    68:          333.5000000    
+  SET    69:          334.0000000    
+  SET    70:          334.5000000    
+  SET    71:          335.0000000    
+  SET    72:          335.5000000    
+  SET    73:          336.0000000    
+  SET    74:          336.5000000    
+  SET    75:          337.0000000    
+  SET    76:          337.5000000    
+  SET    77:          338.0000000    
+  SET    78:          338.5000000    
+  SET    79:          339.0000000    
+  SET    80:          339.5000000    
+  SET    81:          340.0000000    
+  SET    82:          340.5000000    
+  SET    83:          341.0000000    
+  SET    84:          341.5000000    
+  SET    85:          342.0000000    
+  SET    86:          342.5000000    
+  SET    87:          343.0000000    
+  SET    88:          343.5000000    
+  SET    89:          344.0000000    
+  SET    90:          344.5000000    
+  SET    91:          345.0000000    
+  SET    92:          345.5000000    
+  SET    93:          346.0000000    
+  SET    94:          346.5000000    
+  SET    95:          347.0000000    
+  SET    96:          347.5000000    
+  SET    97:          348.0000000    
+  SET    98:          348.5000000    
+  SET    99:          349.0000000    
+  SET   100:          349.5000000    
+  SET   101:          350.0000000    
+  SET   102:          350.5000000    
+  SET   103:          351.0000000    
+  SET   104:          351.5000000    
+  SET   105:          352.0000000    
+  SET   106:          352.5000000    
+  SET   107:          353.0000000    
+  SET   108:          353.5000000    
+  SET   109:          354.0000000    
+  SET   110:          354.5000000    
+  SET   111:          355.0000000    
+  SET   112:          355.5000000    
+  SET   113:          356.0000000    
+  SET   114:          356.5000000    
+  SET   115:          357.0000000    
+  SET   116:          357.5000000    
+  SET   117:          358.0000000    
+  SET   118:          358.5000000    
+  SET   119:          359.0000000    
+  SET   120:          359.5000000    
+  SET   121:          360.0000000    
+  SET   122:          360.5000000    
+  SET   123:          361.0000000    
+  SET   124:          361.5000000    
+  SET   125:          362.0000000    
+  SET   126:          362.5000000    
+  SET   127:          363.0000000    
+  SET   128:          363.5000000    
+  SET   129:          364.0000000    
+  SET   130:          364.5000000    
+  SET   131:          365.0000000    
+  SET   132:          365.5000000    
+  SET   133:          366.0000000    
+  SET   134:          366.5000000    
+  SET   135:          367.0000000    
+  SET   136:          367.5000000    
+  SET   137:          368.0000000    
+  SET   138:          368.5000000    
+  SET   139:          369.0000000    
+  SET   140:          369.5000000    
+  SET   141:          370.0000000    
+  SET   142:          370.5000000    
+  SET   143:          371.0000000    
+  SET   144:          371.5000000    
+  SET   145:          372.0000000    
+  SET   146:          372.5000000    
+  SET   147:          373.0000000    
+  SET   148:          373.5000000    
+  SET   149:          374.0000000    
+  SET   150:          374.5000000    
+  SET   151:          375.0000000    
+  SET   152:          375.5000000    
+  SET   153:          376.0000000    
+  SET   154:          376.5000000    
+  SET   155:          377.0000000    
+  SET   156:          377.5000000    
+  SET   157:          378.0000000    
+  SET   158:          378.5000000    
+  SET   159:          379.0000000    
+  SET   160:          379.5000000    
+  SET   161:          380.0000000    
+  SET   162:          380.5000000    
+  SET   163:          381.0000000    
+  SET   164:          381.5000000    
+  SET   165:          382.0000000    
+  SET   166:          382.5000000    
+  SET   167:          383.0000000    
+  SET   168:          383.5000000    
+  SET   169:          384.0000000    
+  SET   170:          384.5000000    
+  SET   171:          385.0000000    
+  SET   172:          385.5000000    
+  SET   173:          386.0000000    
+  SET   174:          386.5000000    
+  SET   175:          387.0000000    
+  SET   176:          387.5000000    
+  SET   177:          388.0000000    
+  SET   178:          388.5000000    
+  SET   179:          389.0000000    
+  SET   180:          389.5000000    
+  SET   181:          390.0000000    
+  SET   182:          390.5000000    
+  SET   183:          391.0000000    
+  SET   184:          391.5000000    
+  SET   185:          392.0000000    
+  SET   186:          392.5000000    
+  SET   187:          393.0000000    
+  SET   188:          393.5000000    
+  SET   189:          394.0000000    
+  SET   190:          394.5000000    
+  SET   191:          395.0000000    
+  SET   192:          395.5000000    
+  SET   193:          396.0000000    
+  SET   194:          396.5000000    
+  SET   195:          397.0000000    
+  SET   196:          397.5000000    
+  SET   197:          398.0000000    
+  SET   198:          398.5000000    
+  SET   199:          399.0000000    
+  SET   200:          399.5000000    
+  SET   201:          400.0000000    
+
+  ======================================================================================================================
+
+  TOTAL ANGULAR MOMENTUM JTOT =   4
+
+  EACH JTOT IS SPLIT INTO A MAXIMUM OF   2 SYMMETRY BLOCKS
+
+  CALCULATION(S) WILL BE FOR SYMMETRY BLOCK   2
+
+  ======================================================================================================================
+
+  THESE ENERGY VALUES ARE RELATIVE TO THE REFERENCE ENERGY SPECIFIED BY MONOMER QUANTUM NUMBERS   2   2   2   2
+  THE REFERENCE ENERGY WILL BE CALCULATED FOR EVERY EFV SET
+
+  INITIALIZATION DONE.  TIME WAS   0.00 CPU SECS.       322 WORDS OF STORAGE USED.
+
+  ================================== 23Na-87Rb scattering length of Na|1,1> + Rb|1,1> ==================================
+
+  *****************************  ANGULAR MOMENTUM JTOT  =   4   AND SYMMETRY BLOCK  =    2  ****************************
+  SYMMETRY BLOCK =   2 SELECTS PARITY  1
+  MTOT =  4/2
+  * * * NOTE.  FOR JTOT =   4,  ALL COUPLING COEFFICIENTS ARE 0.0 FOR POTENTIAL SYMMETRY   3
+
+  EFFECTIVE RANGE AT EFV SET   1 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.881     BOHR WITH 1/A(K=0) =   0.1208244272E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.896     BOHR WITH   A(K=0) =    82.76472019     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   2 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.832     BOHR WITH 1/A(K=0) =   0.1207158620E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.848     BOHR WITH   A(K=0) =    82.83915425     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   3 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.734     BOHR WITH 1/A(K=0) =   0.1206051872E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.749     BOHR WITH   A(K=0) =    82.91517261     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   4 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.626     BOHR WITH 1/A(K=0) =   0.1204923489E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.641     BOHR WITH   A(K=0) =    82.99282070     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   5 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.603     BOHR WITH 1/A(K=0) =   0.1203773202E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.619     BOHR WITH   A(K=0) =    83.07212597     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   6 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.530     BOHR WITH 1/A(K=0) =   0.1202599903E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.545     BOHR WITH   A(K=0) =    83.15317411     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   7 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.430     BOHR WITH 1/A(K=0) =   0.1201402922E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.445     BOHR WITH   A(K=0) =    83.23602123     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   8 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.340     BOHR WITH 1/A(K=0) =   0.1200181703E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.355     BOHR WITH   A(K=0) =    83.32071622     BOHR
+
+  EFFECTIVE RANGE AT EFV SET   9 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.223     BOHR WITH 1/A(K=0) =   0.1198935377E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.238     BOHR WITH   A(K=0) =    83.40733041     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  10 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.202     BOHR WITH 1/A(K=0) =   0.1197663539E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.217     BOHR WITH   A(K=0) =    83.49590339     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  11 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.117     BOHR WITH 1/A(K=0) =   0.1196364858E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.132     BOHR WITH   A(K=0) =    83.58654003     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  12 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   76.025     BOHR WITH 1/A(K=0) =   0.1195038680E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   76.040     BOHR WITH   A(K=0) =    83.67929909     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  13 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.905     BOHR WITH 1/A(K=0) =   0.1193684030E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.920     BOHR WITH   A(K=0) =    83.77426235     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  14 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.833     BOHR WITH 1/A(K=0) =   0.1192300211E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.848     BOHR WITH   A(K=0) =    83.87149326     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  15 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.761     BOHR WITH 1/A(K=0) =   0.1190886195E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.776     BOHR WITH   A(K=0) =    83.97107930     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  16 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.647     BOHR WITH 1/A(K=0) =   0.1189440737E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.662     BOHR WITH   A(K=0) =    84.07312445     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  17 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.577     BOHR WITH 1/A(K=0) =   0.1187963161E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.592     BOHR WITH   A(K=0) =    84.17769371     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  18 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.512     BOHR WITH 1/A(K=0) =   0.1186452107E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.528     BOHR WITH   A(K=0) =    84.28490162     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  19 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.359     BOHR WITH 1/A(K=0) =   0.1184906268E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.374     BOHR WITH   A(K=0) =    84.39486046     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  20 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.314     BOHR WITH 1/A(K=0) =   0.1183324893E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.330     BOHR WITH   A(K=0) =    84.50764428     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  21 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.176     BOHR WITH 1/A(K=0) =   0.1181706190E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.191     BOHR WITH   A(K=0) =    84.62340295     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  22 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   75.021     BOHR WITH 1/A(K=0) =   0.1180049108E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   75.036     BOHR WITH   A(K=0) =    84.74223527     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  23 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.929     BOHR WITH 1/A(K=0) =   0.1178352415E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.944     BOHR WITH   A(K=0) =    84.86425441     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  24 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.895     BOHR WITH 1/A(K=0) =   0.1176614607E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.910     BOHR WITH   A(K=0) =    84.98959515     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  25 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.756     BOHR WITH 1/A(K=0) =   0.1174833750E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.771     BOHR WITH   A(K=0) =    85.11842560     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  26 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.640     BOHR WITH 1/A(K=0) =   0.1173008508E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.655     BOHR WITH   A(K=0) =    85.25087278     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  27 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.437     BOHR WITH 1/A(K=0) =   0.1171136990E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.452     BOHR WITH   A(K=0) =    85.38710670     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  28 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.354     BOHR WITH 1/A(K=0) =   0.1169217925E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.369     BOHR WITH   A(K=0) =    85.52725458     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  29 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.243     BOHR WITH 1/A(K=0) =   0.1167249045E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.257     BOHR WITH   A(K=0) =    85.67151930     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  30 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   74.153     BOHR WITH 1/A(K=0) =   0.1165228447E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   74.168     BOHR WITH   A(K=0) =    85.82008048     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  31 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   73.977     BOHR WITH 1/A(K=0) =   0.1163153873E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   73.992     BOHR WITH   A(K=0) =    85.97314715     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  32 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   73.804     BOHR WITH 1/A(K=0) =   0.1161023214E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   73.818     BOHR WITH   A(K=0) =    86.13092135     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  33 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   73.726     BOHR WITH 1/A(K=0) =   0.1158834585E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   73.741     BOHR WITH   A(K=0) =    86.29359224     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  34 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   73.541     BOHR WITH 1/A(K=0) =   0.1156584743E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   73.556     BOHR WITH   A(K=0) =    86.46145448     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  35 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   73.378     BOHR WITH 1/A(K=0) =   0.1154271643E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   73.393     BOHR WITH   A(K=0) =    86.63471870     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  36 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   73.217     BOHR WITH 1/A(K=0) =   0.1151892463E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   73.231     BOHR WITH   A(K=0) =    86.81365866     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  37 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   73.067     BOHR WITH 1/A(K=0) =   0.1149444230E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   73.082     BOHR WITH   A(K=0) =    86.99856546     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  38 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   72.946     BOHR WITH 1/A(K=0) =   0.1146924011E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   72.960     BOHR WITH   A(K=0) =    87.18973372     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  39 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   72.802     BOHR WITH 1/A(K=0) =   0.1144328280E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   72.817     BOHR WITH   A(K=0) =    87.38751008     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  40 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   72.544     BOHR WITH 1/A(K=0) =   0.1141653341E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   72.559     BOHR WITH   A(K=0) =    87.59226249     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  41 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   72.383     BOHR WITH 1/A(K=0) =   0.1138896284E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   72.398     BOHR WITH   A(K=0) =    87.80430712     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  42 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   72.180     BOHR WITH 1/A(K=0) =   0.1136052561E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   72.194     BOHR WITH   A(K=0) =    88.02409551     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  43 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   72.010     BOHR WITH 1/A(K=0) =   0.1133118423E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   72.024     BOHR WITH   A(K=0) =    88.25202828     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  44 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   71.780     BOHR WITH 1/A(K=0) =   0.1130088990E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   71.794     BOHR WITH   A(K=0) =    88.48860577     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  45 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   71.615     BOHR WITH 1/A(K=0) =   0.1126959942E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   71.630     BOHR WITH   A(K=0) =    88.73429782     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  46 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   71.366     BOHR WITH 1/A(K=0) =   0.1123725846E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   71.381     BOHR WITH   A(K=0) =    88.98967616     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  47 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   71.165     BOHR WITH 1/A(K=0) =   0.1120381476E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   71.179     BOHR WITH   A(K=0) =    89.25531285     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  48 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   70.949     BOHR WITH 1/A(K=0) =   0.1116921025E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   70.963     BOHR WITH   A(K=0) =    89.53184416     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  49 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   70.693     BOHR WITH 1/A(K=0) =   0.1113338156E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   70.707     BOHR WITH   A(K=0) =    89.81996944     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  50 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   70.452     BOHR WITH 1/A(K=0) =   0.1109626346E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   70.466     BOHR WITH   A(K=0) =    90.12042611     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  51 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   70.179     BOHR WITH 1/A(K=0) =   0.1105778428E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   70.193     BOHR WITH   A(K=0) =    90.43402963     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  52 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   69.912     BOHR WITH 1/A(K=0) =   0.1101786610E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   69.926     BOHR WITH   A(K=0) =    90.76167584     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  53 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   69.662     BOHR WITH 1/A(K=0) =   0.1097642680E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   69.676     BOHR WITH   A(K=0) =    91.10432830     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  54 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   69.311     BOHR WITH 1/A(K=0) =   0.1093337426E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   69.325     BOHR WITH   A(K=0) =    91.46307145     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  55 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   69.009     BOHR WITH 1/A(K=0) =   0.1088861652E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   69.022     BOHR WITH   A(K=0) =    91.83903105     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  56 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   68.658     BOHR WITH 1/A(K=0) =   0.1084204496E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   68.672     BOHR WITH   A(K=0) =    92.23352190     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  57 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   68.364     BOHR WITH 1/A(K=0) =   0.1079354965E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   68.378     BOHR WITH   A(K=0) =    92.64792616     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  58 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   68.014     BOHR WITH 1/A(K=0) =   0.1074300321E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   68.028     BOHR WITH   A(K=0) =    93.08383993     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  59 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   67.654     BOHR WITH 1/A(K=0) =   0.1069027597E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   67.667     BOHR WITH   A(K=0) =    93.54295382     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  60 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   67.277     BOHR WITH 1/A(K=0) =   0.1063521954E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   67.291     BOHR WITH   A(K=0) =    94.02720719     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  61 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   66.880     BOHR WITH 1/A(K=0) =   0.1057767580E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   66.893     BOHR WITH   A(K=0) =    94.53872570     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  62 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   66.469     BOHR WITH 1/A(K=0) =   0.1051747157E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   66.482     BOHR WITH   A(K=0) =    95.07988535     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  63 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   65.974     BOHR WITH 1/A(K=0) =   0.1045441368E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   65.987     BOHR WITH   A(K=0) =    95.65337872     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  64 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   65.569     BOHR WITH 1/A(K=0) =   0.1038829802E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   65.582     BOHR WITH   A(K=0) =    96.26215856     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  65 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   65.028     BOHR WITH 1/A(K=0) =   0.1031888784E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   65.041     BOHR WITH   A(K=0) =    96.90966769     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  66 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   64.544     BOHR WITH 1/A(K=0) =   0.1024593546E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   64.556     BOHR WITH   A(K=0) =    97.59967698     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  67 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   63.984     BOHR WITH 1/A(K=0) =   0.1016915506E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   63.997     BOHR WITH   A(K=0) =    98.33658599     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  68 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   63.403     BOHR WITH 1/A(K=0) =   0.1008823820E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   63.415     BOHR WITH   A(K=0) =    99.12533502     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  69 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   62.767     BOHR WITH 1/A(K=0) =   0.1000283816E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   62.779     BOHR WITH   A(K=0) =    99.97162554     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  70 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   62.141     BOHR WITH 1/A(K=0) =   0.9912570324E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   62.154     BOHR WITH   A(K=0) =    100.8820073     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  71 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   61.406     BOHR WITH 1/A(K=0) =   0.9816999658E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   61.418     BOHR WITH   A(K=0) =    101.8641159     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  72 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   60.706     BOHR WITH 1/A(K=0) =   0.9715647131E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   60.718     BOHR WITH   A(K=0) =    102.9267508     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  73 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   59.903     BOHR WITH 1/A(K=0) =   0.9607963988E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   59.915     BOHR WITH   A(K=0) =    104.0803226     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  74 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   59.039     BOHR WITH 1/A(K=0) =   0.9493335292E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   59.051     BOHR WITH   A(K=0) =    105.3370560     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  75 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   58.140     BOHR WITH 1/A(K=0) =   0.9371064664E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   58.151     BOHR WITH   A(K=0) =    106.7114599     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  76 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   57.126     BOHR WITH 1/A(K=0) =   0.9240353516E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   57.137     BOHR WITH   A(K=0) =    108.2209669     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  77 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   56.064     BOHR WITH 1/A(K=0) =   0.9100295491E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   56.075     BOHR WITH   A(K=0) =    109.8865408     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  78 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   54.906     BOHR WITH 1/A(K=0) =   0.8949843500E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   54.917     BOHR WITH   A(K=0) =    111.7337964     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  79 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   53.639     BOHR WITH 1/A(K=0) =   0.8787790625E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   53.650     BOHR WITH   A(K=0) =    113.7942441     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  80 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   52.279     BOHR WITH 1/A(K=0) =   0.8612735500E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   52.289     BOHR WITH   A(K=0) =    116.1071290     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  81 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   50.762     BOHR WITH 1/A(K=0) =   0.8423039343E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   50.772     BOHR WITH   A(K=0) =    118.7219899     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  82 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   49.098     BOHR WITH 1/A(K=0) =   0.8216778103E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   49.107     BOHR WITH   A(K=0) =    121.7022024     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  83 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   47.256     BOHR WITH 1/A(K=0) =   0.7991674109E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   47.265     BOHR WITH   A(K=0) =    125.1302266     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  84 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   45.224     BOHR WITH 1/A(K=0) =   0.7745012122E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   45.232     BOHR WITH   A(K=0) =    129.1153554     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  85 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   42.962     BOHR WITH 1/A(K=0) =   0.7473527962E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   42.970     BOHR WITH   A(K=0) =    133.8056133     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  86 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   40.380     BOHR WITH 1/A(K=0) =   0.7173261891E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   40.387     BOHR WITH   A(K=0) =    139.4065919     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  87 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   37.492     BOHR WITH 1/A(K=0) =   0.6839369175E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   37.499     BOHR WITH   A(K=0) =    146.2123140     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  88 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   34.194     BOHR WITH 1/A(K=0) =   0.6465846943E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   34.200     BOHR WITH   A(K=0) =    154.6587791     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  89 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   30.387     BOHR WITH 1/A(K=0) =   0.6045176511E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   30.391     BOHR WITH   A(K=0) =    165.4211407     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  90 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   25.964     BOHR WITH 1/A(K=0) =   0.5567806782E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   25.968     BOHR WITH   A(K=0) =    179.6039328     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  91 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   20.753     BOHR WITH 1/A(K=0) =   0.5021419814E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   20.756     BOHR WITH   A(K=0) =    199.1468615     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  92 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   14.575     BOHR WITH 1/A(K=0) =   0.4389852498E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   14.577     BOHR WITH   A(K=0) =    227.7980861     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  93 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   7.0890     BOHR WITH 1/A(K=0) =   0.3651461856E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   7.0895     BOHR WITH   A(K=0) =    273.8629181     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  94 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -2.1173     BOHR WITH 1/A(K=0) =   0.2776597828E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -2.1172     BOHR WITH   A(K=0) =    360.1529864     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  95 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -13.697     BOHR WITH 1/A(K=0) =   0.1723515378E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -13.693     BOHR WITH   A(K=0) =    580.2094944     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  96 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -28.636     BOHR WITH 1/A(K=0) =   0.4315102316E-03 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -28.576     BOHR WITH   A(K=0) =    2317.439909     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  97 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -48.562     BOHR WITH 1/A(K=0) =  -0.1191224647E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -48.625     BOHR WITH   A(K=0) =   -839.4719132     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  98 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -76.219     BOHR WITH 1/A(K=0) =  -0.3290443631E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -76.274     BOHR WITH   A(K=0) =   -303.9103519     BOHR
+
+  EFFECTIVE RANGE AT EFV SET  99 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -116.81     BOHR WITH 1/A(K=0) =  -0.6112301667E-02 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -116.88     BOHR WITH   A(K=0) =   -163.6044773     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 100 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -180.95     BOHR WITH 1/A(K=0) =  -0.1010777964E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -181.05     BOHR WITH   A(K=0) =   -98.93368922     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 101 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -293.73     BOHR WITH 1/A(K=0) =  -0.1620170026E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -293.90     BOHR WITH   A(K=0) =   -61.72191260     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 102 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -528.94     BOHR WITH 1/A(K=0) =  -0.2663675789E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -529.28     BOHR WITH   A(K=0) =   -37.54210317     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 103 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -1198.0     BOHR WITH 1/A(K=0) =  -0.4861998307E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -1198.9     BOHR WITH   A(K=0) =   -20.56767203     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 104 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -5363.8     BOHR WITH 1/A(K=0) =  -0.1250798043     BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -5371.0     BOHR WITH   A(K=0) =   -7.994892541     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 105 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -78364.     BOHR WITH 1/A(K=0) =   0.5909080222     BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -78039.     BOHR WITH   A(K=0) =    1.692304223     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 106 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -1519.5     BOHR WITH 1/A(K=0) =   0.1065471055     BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -1518.9     BOHR WITH   A(K=0) =    9.385519679     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 107 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -257.85     BOHR WITH 1/A(K=0) =   0.6392525070E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -257.81     BOHR WITH   A(K=0) =    15.64327062     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 108 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS  -15.933     BOHR WITH 1/A(K=0) =   0.4799991971E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS  -15.933     BOHR WITH   A(K=0) =    20.83336818     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 109 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   61.797     BOHR WITH 1/A(K=0) =   0.3967024899E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   61.800     BOHR WITH   A(K=0) =    25.20780749     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 110 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   93.002     BOHR WITH 1/A(K=0) =   0.3454817968E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   93.010     BOHR WITH   A(K=0) =    28.94508503     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 111 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   106.13     BOHR WITH 1/A(K=0) =   0.3107984473E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   106.14     BOHR WITH   A(K=0) =    32.17519284     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 112 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   112.39     BOHR WITH 1/A(K=0) =   0.2857554444E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   112.40     BOHR WITH   A(K=0) =    34.99495866     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 113 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   114.91     BOHR WITH 1/A(K=0) =   0.2668226476E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   114.93     BOHR WITH   A(K=0) =    37.47807785     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 114 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   115.93     BOHR WITH 1/A(K=0) =   0.2520060605E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   115.94     BOHR WITH   A(K=0) =    39.68158516     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 115 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   115.93     BOHR WITH 1/A(K=0) =   0.2400941393E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   115.94     BOHR WITH   A(K=0) =    41.65032924     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 116 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   115.20     BOHR WITH 1/A(K=0) =   0.2303082546E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   115.22     BOHR WITH   A(K=0) =    43.42006743     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 117 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   114.36     BOHR WITH 1/A(K=0) =   0.2221253551E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   114.38     BOHR WITH   A(K=0) =    45.01962388     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 118 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   113.28     BOHR WITH 1/A(K=0) =   0.2151808741E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   113.30     BOHR WITH   A(K=0) =    46.47253144     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 119 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   112.15     BOHR WITH 1/A(K=0) =   0.2092129957E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   112.16     BOHR WITH   A(K=0) =    47.79817765     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 120 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   111.27     BOHR WITH 1/A(K=0) =   0.2040289825E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   111.29     BOHR WITH   A(K=0) =    49.01264424     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 121 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   110.29     BOHR WITH 1/A(K=0) =   0.1994834273E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   110.31     BOHR WITH   A(K=0) =    50.12947725     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 122 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   109.23     BOHR WITH 1/A(K=0) =   0.1954649461E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   109.25     BOHR WITH   A(K=0) =    51.16006799     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 123 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   108.18     BOHR WITH 1/A(K=0) =   0.1918865831E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   108.20     BOHR WITH   A(K=0) =    52.11411745     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 124 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   107.25     BOHR WITH 1/A(K=0) =   0.1886795720E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   107.27     BOHR WITH   A(K=0) =    52.99990785     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 125 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   106.50     BOHR WITH 1/A(K=0) =   0.1857887375E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   106.52     BOHR WITH   A(K=0) =    53.82457550     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 126 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   105.61     BOHR WITH 1/A(K=0) =   0.1831692265E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   105.63     BOHR WITH   A(K=0) =    54.59432306     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 127 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   104.88     BOHR WITH 1/A(K=0) =   0.1807843772E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   104.90     BOHR WITH   A(K=0) =    55.31451379     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 128 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   104.19     BOHR WITH 1/A(K=0) =   0.1786038355E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   104.21     BOHR WITH   A(K=0) =    55.98983862     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 129 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   103.57     BOHR WITH 1/A(K=0) =   0.1766022274E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   103.59     BOHR WITH   A(K=0) =    56.62442696     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 130 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   102.85     BOHR WITH 1/A(K=0) =   0.1747581896E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   102.87     BOHR WITH   A(K=0) =    57.22192445     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 131 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   102.16     BOHR WITH 1/A(K=0) =   0.1730536853E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   102.18     BOHR WITH   A(K=0) =    57.78553578     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 132 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   101.65     BOHR WITH 1/A(K=0) =   0.1714733398E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   101.67     BOHR WITH   A(K=0) =    58.31810319     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 133 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   101.09     BOHR WITH 1/A(K=0) =   0.1700038783E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   101.10     BOHR WITH   A(K=0) =    58.82218701     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 134 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   100.52     BOHR WITH 1/A(K=0) =   0.1686338945E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   100.54     BOHR WITH   A(K=0) =    59.30005915     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 135 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   100.01     BOHR WITH 1/A(K=0) =   0.1673534857E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   100.03     BOHR WITH   A(K=0) =    59.75375941     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 136 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   99.587     BOHR WITH 1/A(K=0) =   0.1661540404E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   99.606     BOHR WITH   A(K=0) =    60.18511434     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 137 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   99.040     BOHR WITH 1/A(K=0) =   0.1650279512E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   99.058     BOHR WITH   A(K=0) =    60.59579514     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 138 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   98.712     BOHR WITH 1/A(K=0) =   0.1639686527E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   98.731     BOHR WITH   A(K=0) =    60.98726651     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 139 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   98.157     BOHR WITH 1/A(K=0) =   0.1629701570E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   98.176     BOHR WITH   A(K=0) =    61.36092709     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 140 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   97.916     BOHR WITH 1/A(K=0) =   0.1620273995E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   97.934     BOHR WITH   A(K=0) =    61.71795603     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 141 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   97.429     BOHR WITH 1/A(K=0) =   0.1611355970E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   97.448     BOHR WITH   A(K=0) =    62.05953313     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 142 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   97.140     BOHR WITH 1/A(K=0) =   0.1602907410E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   97.158     BOHR WITH   A(K=0) =    62.38663478     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 143 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   96.799     BOHR WITH 1/A(K=0) =   0.1594890715E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   96.817     BOHR WITH   A(K=0) =    62.70022030     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 144 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   96.368     BOHR WITH 1/A(K=0) =   0.1587272302E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   96.386     BOHR WITH   A(K=0) =    63.00116183     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 145 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   96.082     BOHR WITH 1/A(K=0) =   0.1580023224E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   96.101     BOHR WITH   A(K=0) =    63.29020842     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 146 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   95.859     BOHR WITH 1/A(K=0) =   0.1573116256E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   95.877     BOHR WITH   A(K=0) =    63.56809217     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 147 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   95.508     BOHR WITH 1/A(K=0) =   0.1566525972E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   95.527     BOHR WITH   A(K=0) =    63.83551947     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 148 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   95.220     BOHR WITH 1/A(K=0) =   0.1560231073E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   95.239     BOHR WITH   A(K=0) =    64.09306988     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 149 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   94.904     BOHR WITH 1/A(K=0) =   0.1554211204E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   94.922     BOHR WITH   A(K=0) =    64.34131920     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 150 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   94.671     BOHR WITH 1/A(K=0) =   0.1548447794E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   94.689     BOHR WITH   A(K=0) =    64.58080121     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 151 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   94.435     BOHR WITH 1/A(K=0) =   0.1542924265E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   94.453     BOHR WITH   A(K=0) =    64.81199461     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 152 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   94.155     BOHR WITH 1/A(K=0) =   0.1537624955E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   94.174     BOHR WITH   A(K=0) =    65.03536436     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 153 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   93.863     BOHR WITH 1/A(K=0) =   0.1532535799E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   93.881     BOHR WITH   A(K=0) =    65.25133002     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 154 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   93.660     BOHR WITH 1/A(K=0) =   0.1527644003E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   93.678     BOHR WITH   A(K=0) =    65.46027673     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 155 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   93.420     BOHR WITH 1/A(K=0) =   0.1522937544E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   93.438     BOHR WITH   A(K=0) =    65.66257398     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 156 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   93.233     BOHR WITH 1/A(K=0) =   0.1518405581E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   93.251     BOHR WITH   A(K=0) =    65.85855611     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 157 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   93.060     BOHR WITH 1/A(K=0) =   0.1514037557E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   93.078     BOHR WITH   A(K=0) =    66.04855916     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 158 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   92.862     BOHR WITH 1/A(K=0) =   0.1509824387E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   92.880     BOHR WITH   A(K=0) =    66.23286787     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 159 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   92.599     BOHR WITH 1/A(K=0) =   0.1505756932E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   92.617     BOHR WITH   A(K=0) =    66.41178072     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 160 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   92.475     BOHR WITH 1/A(K=0) =   0.1501827756E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   92.493     BOHR WITH   A(K=0) =    66.58553137     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 161 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   92.244     BOHR WITH 1/A(K=0) =   0.1498028720E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   92.262     BOHR WITH   A(K=0) =    66.75439384     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 162 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   92.081     BOHR WITH 1/A(K=0) =   0.1494353142E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   92.098     BOHR WITH   A(K=0) =    66.91858596     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 163 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   91.903     BOHR WITH 1/A(K=0) =   0.1490794489E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   91.921     BOHR WITH   A(K=0) =    67.07832630     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 164 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   91.793     BOHR WITH 1/A(K=0) =   0.1487346896E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   91.811     BOHR WITH   A(K=0) =    67.23381035     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 165 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   91.616     BOHR WITH 1/A(K=0) =   0.1484004037E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   91.634     BOHR WITH   A(K=0) =    67.38526086     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 166 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   91.425     BOHR WITH 1/A(K=0) =   0.1480761188E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   91.443     BOHR WITH   A(K=0) =    67.53283379     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 167 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   91.193     BOHR WITH 1/A(K=0) =   0.1477612859E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   91.211     BOHR WITH   A(K=0) =    67.67672502     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 168 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   91.092     BOHR WITH 1/A(K=0) =   0.1474555216E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   91.110     BOHR WITH   A(K=0) =    67.81705973     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 169 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   90.834     BOHR WITH 1/A(K=0) =   0.1471582929E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   90.852     BOHR WITH   A(K=0) =    67.95403589     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 170 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   90.758     BOHR WITH 1/A(K=0) =   0.1468692878E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   90.776     BOHR WITH   A(K=0) =    68.08775384     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 171 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   90.571     BOHR WITH 1/A(K=0) =   0.1465880388E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   90.588     BOHR WITH   A(K=0) =    68.21838941     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 172 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   90.465     BOHR WITH 1/A(K=0) =   0.1463142363E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   90.483     BOHR WITH   A(K=0) =    68.34604867     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 173 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   90.359     BOHR WITH 1/A(K=0) =   0.1460475109E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   90.377     BOHR WITH   A(K=0) =    68.47086852     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 174 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   90.270     BOHR WITH 1/A(K=0) =   0.1457875363E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   90.288     BOHR WITH   A(K=0) =    68.59296869     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 175 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   90.151     BOHR WITH 1/A(K=0) =   0.1455340191E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   90.169     BOHR WITH   A(K=0) =    68.71245621     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 176 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.966     BOHR WITH 1/A(K=0) =   0.1452866377E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.984     BOHR WITH   A(K=0) =    68.82945381     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 177 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.821     BOHR WITH 1/A(K=0) =   0.1450451619E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.838     BOHR WITH   A(K=0) =    68.94404327     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 178 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.699     BOHR WITH 1/A(K=0) =   0.1448093227E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.716     BOHR WITH   A(K=0) =    69.05632684     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 179 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.589     BOHR WITH 1/A(K=0) =   0.1445788740E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.607     BOHR WITH   A(K=0) =    69.16639782     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 180 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.395     BOHR WITH 1/A(K=0) =   0.1443535730E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.412     BOHR WITH   A(K=0) =    69.27434985     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 181 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.265     BOHR WITH 1/A(K=0) =   0.1441332158E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.282     BOHR WITH   A(K=0) =    69.38025952     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 182 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.203     BOHR WITH 1/A(K=0) =   0.1439176059E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.220     BOHR WITH   A(K=0) =    69.48420142     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 183 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   89.056     BOHR WITH 1/A(K=0) =   0.1437064960E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   89.073     BOHR WITH   A(K=0) =    69.58627615     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 184 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.958     BOHR WITH 1/A(K=0) =   0.1434997628E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.975     BOHR WITH   A(K=0) =    69.68652575     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 185 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.907     BOHR WITH 1/A(K=0) =   0.1432971854E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.924     BOHR WITH   A(K=0) =    69.78504069     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 186 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.788     BOHR WITH 1/A(K=0) =   0.1430985786E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.805     BOHR WITH   A(K=0) =    69.88189547     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 187 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.720     BOHR WITH 1/A(K=0) =   0.1429038109E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.738     BOHR WITH   A(K=0) =    69.97713951     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 188 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.569     BOHR WITH 1/A(K=0) =   0.1427126838E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.586     BOHR WITH   A(K=0) =    70.07085599     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 189 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.509     BOHR WITH 1/A(K=0) =   0.1425251202E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.526     BOHR WITH   A(K=0) =    70.16306950     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 190 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.335     BOHR WITH 1/A(K=0) =   0.1423408975E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.352     BOHR WITH   A(K=0) =    70.25387705     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 191 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.210     BOHR WITH 1/A(K=0) =   0.1421599294E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.227     BOHR WITH   A(K=0) =    70.34330951     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 192 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.143     BOHR WITH 1/A(K=0) =   0.1419820930E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.160     BOHR WITH   A(K=0) =    70.43141644     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 193 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   88.055     BOHR WITH 1/A(K=0) =   0.1418072399E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   88.072     BOHR WITH   A(K=0) =    70.51826074     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 194 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.899     BOHR WITH 1/A(K=0) =   0.1416352248E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.916     BOHR WITH   A(K=0) =    70.60390469     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 195 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.857     BOHR WITH 1/A(K=0) =   0.1414659970E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.875     BOHR WITH   A(K=0) =    70.68836420     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 196 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.686     BOHR WITH 1/A(K=0) =   0.1412993783E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.703     BOHR WITH   A(K=0) =    70.77171915     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 197 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.594     BOHR WITH 1/A(K=0) =   0.1411353192E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.611     BOHR WITH   A(K=0) =    70.85398590     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 198 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.633     BOHR WITH 1/A(K=0) =   0.1409737271E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.650     BOHR WITH   A(K=0) =    70.93520275     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 199 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.496     BOHR WITH 1/A(K=0) =   0.1408144455E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.513     BOHR WITH   A(K=0) =    71.01544079     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 200 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.334     BOHR WITH 1/A(K=0) =   0.1406573710E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.351     BOHR WITH   A(K=0) =    71.09474492     BOHR
+
+  EFFECTIVE RANGE AT EFV SET 201 FOR CHANNEL   1:
+  FROM EXPANSION OF 1/A AT ENERGIES 1 AND   2 IS   87.290     BOHR WITH 1/A(K=0) =   0.1405024887E-01 BOHR^-1
+  FROM EXPANSION OF  A  AT ENERGIES 1 AND   2 IS   87.307     BOHR WITH   A(K=0) =    71.17311590     BOHR
+
+
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---
+ |                                                                            |
+ |                Non-reactive quantum scattering calculations                |
+ |                     on atomic and molecular collisions                     |
+ |                                                                            |
+ |              Copyright (C) 2020 J. M. Hutson & C. R. Le Sueur              |
+ |                                                                            |
+ |                               Version 2020.01                              |
+ |                                                                            |
+ |                    This run used      61.08 cpu secs and                   |
+ |               1003 of the allocated   1000000 words of storage             |
+ |                                                                            |
+  ---- MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ------ MOLSCAT ---

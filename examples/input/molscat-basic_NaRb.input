@@ -1,0 +1,40 @@
+ &INPUT
+    LABEL  = '23Na-87Rb scattering length of Na|1,1> + Rb|1,1>',
+    URED   =  18.18053815,
+    IPRINT =   6,
+    ICHAN  =   1,   IPHSUM =     1,   IFCONV =  1,
+    RMIN   =   2.0, RMID   =  21.0,   RMAX   = 15.0E3, IRMSET = 0,
+    IPROPS =   6,   DR     =   0.002,
+    IPROPL =   9,   TOLHIL =   1.E-7,
+    JTOTL  =   4,   JTOTU  =   4,     JSTEP  =  2,
+    EUNITS =   2,   NNRG   =   1,     ENERGY =  1.E-7,
+                    DTOL   =   1.E-6, MONQN  =  2, 2, 2, 2,
+    FLDMIN = 330.0, FLDMAX = 360.0,   DFIELD =  1.0,
+ /
+
+ &BASIS
+    ITYPE  = 9,
+ /
+
+ &BASIS9
+    ISA    =  1,           ! data for NA
+    ISB    =  1,           ! data for RB
+    GSA    =  2.0023193043622,
+    GSB    =  2.0023193043622,
+    INUCA  =  3,
+    INUCB  =  3,
+    HFSPLA = +1.7716261288,
+    HFSPLB = +6.834682610904290,
+    GA     = -8.0461080E-4,
+    GB     = -9.951414E-4
+    LMAX   =  0,
+
+ /
+
+ &POTL
+    MXLAM  =  3, LAMBDA =  0,  1,  3,
+                 NTERM  = -1, -1,  2,
+                 NPOWER =         -3,               0,
+                 E      =                          -0.7196,
+                 A      =         -1.002320649155,  9.182916799,
+ /

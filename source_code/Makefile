@@ -100,7 +100,7 @@ EFVS_DEPS =       base.o base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
 PHYS_CONST_DEPS = base9-1S_3Sigma_cpld.o base9-alk_alk_ucpld.o \
                   bd.driver.o chckru.o eavg.o ecnv.o extpot-Ar_CH4.o \
                   extpot-Ar_CO2.o extpot-Rg_HX.o fld.driver.o mol.driver.o \
-                  pot_data_Tiemann-Rb2-2010.o surbas.o \
+                  pot_data_Tiemann-NaRb-2021.o surbas.o \
 
 (addprefix $(OBJDIR)/,$(PHYS_CONST_DEPS)): physical_constants.mod
 #
@@ -194,7 +194,7 @@ POT-RGH2    = potenl-Rg_H2.o $(POTUTILS)
 #
 # note that modules must be earlier in dependency lists than object codes
 # that use them because they must be compiled first
-POT-RB2     = pot_data_Tiemann-Rb2-2010.o \
+POT-NARB     = pot_data_Tiemann-NaRb-2021.o \
                  $(POTENL-GP) vstar-Tiemann.o     vrtp-dummy.o
 #
 # dependency lists for plug-in basis-set suites ===============================
@@ -218,13 +218,13 @@ CORE_FLD = $(MODULES) fld.driver.o $(CLOCK) $(DIAG) $(LA_UTILS) $(FLD_SUBS)
 PROGS =     molscat-basic \
             molscat-H2_H2 molscat-Rg_HX  molscat-Rg_CO2 \
             molscat-Rg_H2 molscat-Ar_CH4 molscat-Mg_NH \
-            molscat-Rb2 \
+            molscat-NaRb \
             bound-basic \
-            bound-Rg_HX   bound-Rb2      bound-Ar_CH4 \
+            bound-Rg_HX   bound-NaRb      bound-Ar_CH4 \
             bound-H2_H2   bound-Rg_H2    bound-Mg_NH \
             bound-Rg_CO2  \
             field-basic \
-            field-Mg_NH   field-Rb2
+            field-Mg_NH   field-NaRb
 USER-PROGS = 
 ###############################################################################
 #
@@ -275,11 +275,11 @@ $(EXECDIR)/molscat-Mg_NH     : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(BASE9-MGNH) \
                                                       $(POT-MGNH))
 	$(LINK.f) $^ $(LIBS) -o $@
-$(EXECDIR)/molscat-Rb2       : $(addprefix $(OBJDIR)/,main1M.o \
+$(EXECDIR)/molscat-NaRb       : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(CORE_MOL) \
                                                       $(REPLACEABLE) \
                                                       $(BASE9-ALK2) \
-                                                      $(POT-RB2))
+                                                      $(POT-NARB))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/bound-basic       : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(CORE_BND) \
@@ -293,11 +293,11 @@ $(EXECDIR)/bound-Rg_HX       : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(BASE9-UNUSED) \
                                                       $(POT-ARHX))
 	$(LINK.f) $^ $(LIBS) -o $@
-$(EXECDIR)/bound-Rb2         : $(addprefix $(OBJDIR)/,main1M.o \
+$(EXECDIR)/bound-NaRb         : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(CORE_BND) \
                                                       $(REPLACEABLE) \
                                                       $(BASE9-ALK2) \
-                                                      $(POT-RB2))
+                                                      $(POT-NARB))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/bound-H2_H2       : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(CORE_BND) \
@@ -335,11 +335,11 @@ $(EXECDIR)/field-basic       : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(BASE9-UNUSED) \
                                                       $(POT-BASIC))
 	$(LINK.f) $^ $(LIBS) -o $@
-$(EXECDIR)/field-Rb2         : $(addprefix $(OBJDIR)/,main1M.o \
+$(EXECDIR)/field-NaRb         : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(CORE_FLD) \
                                                       $(REPLACEABLE) \
                                                       $(BASE9-ALK2) \
-                                                      $(POT-RB2))
+                                                      $(POT-NARB))
 	$(LINK.f) $^ $(LIBS) -o $@
 $(EXECDIR)/field-Mg_NH       : $(addprefix $(OBJDIR)/,main1M.o \
                                                       $(CORE_FLD) \
